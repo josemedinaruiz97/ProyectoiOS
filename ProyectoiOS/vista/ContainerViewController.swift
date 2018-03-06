@@ -63,8 +63,8 @@ open class ContainerViewController: UIViewController {
         if segue.identifier == segueIdentifier{
             if(segue.identifier=="primera"){
                 if viewController != nil{
-                    let datos=viewController as! ViewController
-                    self.cardProduct=datos.cardProduct
+                    let datos=try viewController as! ViewController
+                    try self.cardProduct=datos.cardProduct
                     viewController.view.removeFromSuperview()
                     viewController = nil
                 }
@@ -84,7 +84,19 @@ open class ContainerViewController: UIViewController {
                 destino?.categoryArray=self.arrayFamilias
                 destino?.cardProduct=self.cardProduct
                 print("pepe1")
+            }else if(segue.identifier=="tercera"){
+            /*if viewController != nil{
+                let datos=viewController as! MainViewController
+                self.cardProduct=datos.cardProduct
+                viewController.view.removeFromSuperview()
+                viewController = nil
             }
+            let destino = segue.destination as? ViewController
+            destino?.productArray=self.arrayProductos
+            destino?.categoryArray=self.arrayFamilias
+            destino?.cardProduct=self.cardProduct
+            print("pepe1")*/
+        }
             //Add to dictionary if isn't already there
             viewController = segue.destination
             UIView.transition(with: self.view, duration: animationDurationWithOptions.0, options: animationDurationWithOptions.1, animations: {

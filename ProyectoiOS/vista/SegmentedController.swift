@@ -22,6 +22,9 @@ class SegmentedController: UIViewController {
         case 1:
             container.segueIdentifierReceivedFromParent("primera")
             break
+        case 2:
+            container.segueIdentifierReceivedFromParent("tercera")
+            break
         default:
         container.segueIdentifierReceivedFromParent("primera")
         break

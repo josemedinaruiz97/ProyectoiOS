@@ -159,6 +159,7 @@
                     <connections>
                         <segue destination="rED-2e-yHm" kind="custom" identifier="primera" customClass="EmptySegue" customModule="ProyectoiOS" customModuleProvider="target" id="swr-Kk-Rjf"/>
                         <segue destination="4Ht-d6-UJt" kind="custom" identifier="segunda" customClass="EmptySegue" customModule="ProyectoiOS" customModuleProvider="target" id="l7S-QW-bYs"/>
+                        <segue destination="XVc-dn-mP4" kind="custom" identifier="tercera" customClass="EmptySegue" customModule="ProyectoiOS" customModuleProvider="target" id="rKS-mY-AWt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qm-31-r4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -292,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tV-Yy-avk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="-246.02698650674665"/>
+            <point key="canvasLocation" x="2262" y="-285"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SZ2-Ya-Bj8">
@@ -471,7 +472,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNl-Dc-0yO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="466.41679160419795"/>
+            <point key="canvasLocation" x="2262" y="439"/>
         </scene>
         <!--Ticket View Collection-->
         <scene sceneID="P7M-DS-iDL">
@@ -533,7 +534,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ta-Jx-aAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="1122.1889055472266"/>
+            <point key="canvasLocation" x="1502" y="889"/>
         </scene>
         <!--Details Product-->
         <scene sceneID="6tl-BM-PJV">
