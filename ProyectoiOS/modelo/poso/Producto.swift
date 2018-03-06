@@ -20,7 +20,7 @@ struct Familia: Codable {
     var family:String
     
 }
-struct Ticket: Codable {
+struct Tickets: Codable {
     var id:String
     var date:String
     var idmember:String

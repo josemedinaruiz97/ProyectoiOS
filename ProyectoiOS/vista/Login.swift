@@ -15,7 +15,7 @@ class Login: UIViewController, OnHttpResponse, UITextFieldDelegate{
     @IBOutlet weak var lError: UILabel!
     private var arrayProductos:[Producto]=Array()
     private var arrayFamilia:[Familia]=Array()
-    private var arrayTickets:[Ticket]=[Ticket(id: "1",date: "6/3/2018",idmember: "1",idcliente: ""),Ticket(id: "2",date: "7/3/2018",idmember: "2",idcliente: "")]
+    private var arrayTickets:[Tickets]=[Tickets(id: "1",date: "6/3/2018",idmember: "1",idcliente: ""),Tickets(id: "2",date: "7/3/2018",idmember: "2",idcliente: "")]
     private var token:String!
     private var usuarioYContraseña:String!
     

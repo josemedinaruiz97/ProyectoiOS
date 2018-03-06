@@ -9,7 +9,7 @@
 import UIKit
 
 class TicketViewCollection: UIViewController {
-
+    var arrayTickets:[Tickets]?
     override func viewDidLoad() {
         super.viewDidLoad()
 
