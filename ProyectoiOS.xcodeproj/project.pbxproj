@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38216B95204F2F420078817C /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38216B94204F2F420078817C /* Ticket.swift */; };
 		38E0BE90204F22D1002E1851 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0BE8F204F22D1002E1851 /* TicketCell.swift */; };
 		38E0BE92204F24F0002E1851 /* TicketViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0BE91204F24F0002E1851 /* TicketViewCollection.swift */; };
 		5CDEF7542036DD6A003B66B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDEF7532036DD6A003B66B9 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38216B94204F2F420078817C /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		38E0BE8F204F22D1002E1851 /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
 		38E0BE91204F24F0002E1851 /* TicketViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewCollection.swift; sourceTree = "<group>"; };
 		5CDEF7502036DD6A003B66B9 /* ProyectoiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 			children = (
 				5CE39166204EB20500C27DC1 /* CardBakery.swift */,
 				5CE39167204EB20500C27DC1 /* Producto.swift */,
+				38216B94204F2F420078817C /* Ticket.swift */,
 			);
 			path = poso;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				5CE39172204EB20500C27DC1 /* ClienteHttp.swift in Sources */,
 				5CE3918B204EB20C00C27DC1 /* SegmentedController.swift in Sources */,
 				5CE3916C204EB20500C27DC1 /* CategoryCollectionViewCell.swift in Sources */,
+				38216B95204F2F420078817C /* Ticket.swift in Sources */,
 				5CE39186204EB20C00C27DC1 /* Login.swift in Sources */,
 				5CDEF7542036DD6A003B66B9 /* AppDelegate.swift in Sources */,
 				5CE39171204EB20500C27DC1 /* RestJsonUtil.swift in Sources */,
