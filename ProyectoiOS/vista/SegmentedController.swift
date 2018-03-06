@@ -41,8 +41,9 @@ class SegmentedController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if(segue.identifier=="container"){
-            self.container=segue.destination as! ContainerViewController
+            self.container=segue.destination as? ContainerViewController
             container.arrayProductos=self.arrayProductos
             container.arrayFamilias=self.arrayFamilias
             container.viewDidLoad()

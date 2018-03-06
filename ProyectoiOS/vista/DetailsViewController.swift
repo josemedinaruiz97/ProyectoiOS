@@ -26,6 +26,7 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        imageProduct.downloadedFrom(link: (productObject?.id)!)
         labelNameProduct.text = productObject?.product
         labelCategory.text = productObject?.idfamily
         labelPrice.text = String(describing: productObject!.price) + " €"
