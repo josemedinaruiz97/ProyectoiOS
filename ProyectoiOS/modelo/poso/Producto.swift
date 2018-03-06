@@ -20,3 +20,16 @@ struct Familia: Codable {
     var family:String
     
 }
+struct Ticket: Codable {
+    var id:String
+    var date:String
+    var idmember:String
+    var idclient:String
+    init(id: String,date: String,idmember: String,idcliente: String) {
+        self.id = id
+        self.date=date
+        self.idmember=idmember
+        self.idclient=idcliente
+    }
+    
+}
