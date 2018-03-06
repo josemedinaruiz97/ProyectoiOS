@@ -73,6 +73,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             prodcutCell.productTilte.text = catSelectArray![indexPath.row].product
             
             prodcutCell.indexPath = indexPath
+            prodcutCell.productImage.downloadedFrom(link: catSelectArray![indexPath.row].id)
             
             prodcutCell.callBack = self
             

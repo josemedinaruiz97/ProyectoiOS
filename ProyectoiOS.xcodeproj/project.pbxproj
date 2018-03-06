@@ -32,6 +32,7 @@
 		5CE3918C204EB20C00C27DC1 /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3917D204EB20C00C27DC1 /* EmptySegue.swift */; };
 		5CE3918D204EB20C00C27DC1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3917E204EB20C00C27DC1 /* ContainerViewController.swift */; };
 		5CE3918E204EB20C00C27DC1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3917F204EB20C00C27DC1 /* DetailsViewController.swift */; };
+		5CE39196204F4B8100C27DC1 /* Imagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE39195204F4B8100C27DC1 /* Imagen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		5CE3917D204EB20C00C27DC1 /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
 		5CE3917E204EB20C00C27DC1 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		5CE3917F204EB20C00C27DC1 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		5CE39195204F4B8100C27DC1 /* Imagen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imagen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				5CE39161204EB20500C27DC1 /* CollectionCell */,
 				5CE39165204EB20500C27DC1 /* poso */,
 				5CE39168204EB20500C27DC1 /* rest */,
+				5CE39195204F4B8100C27DC1 /* Imagen.swift */,
 			);
 			path = modelo;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				38216B95204F2F420078817C /* Ticket.swift in Sources */,
 				5CE39186204EB20C00C27DC1 /* Login.swift in Sources */,
 				5CDEF7542036DD6A003B66B9 /* AppDelegate.swift in Sources */,
+				5CE39196204F4B8100C27DC1 /* Imagen.swift in Sources */,
 				5CE39171204EB20500C27DC1 /* RestJsonUtil.swift in Sources */,
 				38E0BE90204F22D1002E1851 /* TicketCell.swift in Sources */,
 				5CE3916E204EB20500C27DC1 /* ProductCollectionViewCell.swift in Sources */,

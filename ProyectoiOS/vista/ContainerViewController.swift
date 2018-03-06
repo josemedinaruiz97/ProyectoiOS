@@ -15,6 +15,7 @@ open class ContainerViewController: UIViewController {
     var token:String!
     var usuarioYContraseña: String!
     var cardProduct = [CardBakery]()
+    var anterior=""
     //Manipulating container views
     fileprivate weak var viewController : UIViewController!
     /** Pass in a tuple of required TimeInterval with UIViewAnimationOptions */
@@ -64,39 +65,40 @@ open class ContainerViewController: UIViewController {
         if segue.identifier == segueIdentifier{
             if(segue.identifier=="primera"){
                 if viewController != nil{
-                    let datos=try viewController as! ViewController
-                    try self.cardProduct=datos.cardProduct
+                    if anterior != "tercera"{
+                        let datos=try? viewController as! ViewController
+                        try? self.cardProduct=(datos?.cardProduct)!
+                    }
                     viewController.view.removeFromSuperview()
                     viewController = nil
                 }
+                anterior="primera"
                 let destino = segue.destination as? MainViewController
                 destino?.productArray=self.arrayProductos
                 destino?.cardProduct=self.cardProduct
                 print("pepe")
             }else if(segue.identifier=="segunda"){
                 if viewController != nil{
-                    let datos=viewController as! MainViewController
-                    self.cardProduct=datos.cardProduct
+                    if anterior != "tercera"{
+                        let datos=try? viewController as! MainViewController
+                        try? self.cardProduct=(datos?.cardProduct)!
+                    }
                     viewController.view.removeFromSuperview()
                     viewController = nil
                 }
+                anterior="segunda"
                 let destino = segue.destination as? ViewController
                 destino?.productArray=self.arrayProductos
                 destino?.categoryArray=self.arrayFamilias
                 destino?.cardProduct=self.cardProduct
                 print("pepe1")
+                print(cardProduct)
             }else if(segue.identifier=="tercera"){
-            /*if viewController != nil{
-                let datos=viewController as! MainViewController
-                self.cardProduct=datos.cardProduct
-                viewController.view.removeFromSuperview()
-                viewController = nil
-            }
-            let destino = segue.destination as? ViewController
-            destino?.productArray=self.arrayProductos
-            destino?.categoryArray=self.arrayFamilias
-            destino?.cardProduct=self.cardProduct
-            print("pepe1")*/
+                if viewController != nil{
+                    viewController.view.removeFromSuperview()
+                    viewController = nil
+                }
+                anterior="tercera"
                 let destino = segue.destination as? TicketViewCollection
                 destino?.arrayTickets=self.arrayTickets
         }
