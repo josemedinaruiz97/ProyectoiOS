@@ -6,14 +6,13 @@
 //  Copyright © 2018 Jose Medina Ruiz. All rights reserved.
 //
 
-import Foundation
+import UIKit
 struct Producto: Codable {
     var description:String
     var id:String
     var idfamily:String
     var price:String
     var product:String
-
 }
 struct Familia: Codable {
     var id:String

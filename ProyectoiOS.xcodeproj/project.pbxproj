@@ -29,6 +29,7 @@
 		5CE3918C204EB20C00C27DC1 /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3917D204EB20C00C27DC1 /* EmptySegue.swift */; };
 		5CE3918D204EB20C00C27DC1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3917E204EB20C00C27DC1 /* ContainerViewController.swift */; };
 		5CE3918E204EB20C00C27DC1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE3917F204EB20C00C27DC1 /* DetailsViewController.swift */; };
+		5CE39194204F118A00C27DC1 /* Imagenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE39193204F118A00C27DC1 /* Imagenes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		5CE3917D204EB20C00C27DC1 /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
 		5CE3917E204EB20C00C27DC1 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		5CE3917F204EB20C00C27DC1 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		5CE39193204F118A00C27DC1 /* Imagenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imagenes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			children = (
 				5CE39166204EB20500C27DC1 /* CardBakery.swift */,
 				5CE39167204EB20500C27DC1 /* Producto.swift */,
+				5CE39193204F118A00C27DC1 /* Imagenes.swift */,
 			);
 			path = poso;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				5CE3916C204EB20500C27DC1 /* CategoryCollectionViewCell.swift in Sources */,
 				5CE39186204EB20C00C27DC1 /* Login.swift in Sources */,
 				5CDEF7542036DD6A003B66B9 /* AppDelegate.swift in Sources */,
+				5CE39194204F118A00C27DC1 /* Imagenes.swift in Sources */,
 				5CE39171204EB20500C27DC1 /* RestJsonUtil.swift in Sources */,
 				5CE3916E204EB20500C27DC1 /* ProductCollectionViewCell.swift in Sources */,
 				5CE39170204EB20500C27DC1 /* Producto.swift in Sources */,

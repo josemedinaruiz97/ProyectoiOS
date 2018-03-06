@@ -107,8 +107,9 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             product = productArray![indexPath.row]
         }
         
-        prodcutCell.productTilteMain.text = product.product
         
+        prodcutCell.productTilteMain.text = product.product
+        prodcutCell.productImageMain.downloadedFrom(link: product.id)
         prodcutCell.indexPath = indexPath
         
         prodcutCell.callBack = self
@@ -216,5 +217,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         searchController.searchBar.resignFirstResponder()
     }
+    
 
 }
