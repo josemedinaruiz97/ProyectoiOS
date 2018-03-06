@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38E0BE90204F22D1002E1851 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0BE8F204F22D1002E1851 /* TicketCell.swift */; };
+		38E0BE92204F24F0002E1851 /* TicketViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0BE91204F24F0002E1851 /* TicketViewCollection.swift */; };
 		5CDEF7542036DD6A003B66B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDEF7532036DD6A003B66B9 /* AppDelegate.swift */; };
 		5CDEF7592036DD6A003B66B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CDEF7572036DD6A003B66B9 /* Main.storyboard */; };
 		5CDEF75B2036DD6A003B66B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDEF75A2036DD6A003B66B9 /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38E0BE8F204F22D1002E1851 /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
+		38E0BE91204F24F0002E1851 /* TicketViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewCollection.swift; sourceTree = "<group>"; };
 		5CDEF7502036DD6A003B66B9 /* ProyectoiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDEF7532036DD6A003B66B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CDEF7582036DD6A003B66B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 				5CE39162204EB20500C27DC1 /* CategoryCollectionViewCell.swift */,
 				5CE39163204EB20500C27DC1 /* MainProductCollectionViewCell.swift */,
 				5CE39164204EB20500C27DC1 /* ProductCollectionViewCell.swift */,
+				38E0BE8F204F22D1002E1851 /* TicketCell.swift */,
 			);
 			path = CollectionCell;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				5CE3917D204EB20C00C27DC1 /* EmptySegue.swift */,
 				5CE3917E204EB20C00C27DC1 /* ContainerViewController.swift */,
 				5CE3917F204EB20C00C27DC1 /* DetailsViewController.swift */,
+				38E0BE91204F24F0002E1851 /* TicketViewCollection.swift */,
 			);
 			path = vista;
 			sourceTree = "<group>";
@@ -346,6 +352,7 @@
 			files = (
 				5CE39184204EB20C00C27DC1 /* ViewController.swift in Sources */,
 				5CE3918C204EB20C00C27DC1 /* EmptySegue.swift in Sources */,
+				38E0BE92204F24F0002E1851 /* TicketViewCollection.swift in Sources */,
 				5CE39187204EB20C00C27DC1 /* MainViewController.swift in Sources */,
 				5CE39172204EB20500C27DC1 /* ClienteHttp.swift in Sources */,
 				5CE3918B204EB20C00C27DC1 /* SegmentedController.swift in Sources */,
@@ -353,6 +360,7 @@
 				5CE39186204EB20C00C27DC1 /* Login.swift in Sources */,
 				5CDEF7542036DD6A003B66B9 /* AppDelegate.swift in Sources */,
 				5CE39171204EB20500C27DC1 /* RestJsonUtil.swift in Sources */,
+				38E0BE90204F22D1002E1851 /* TicketCell.swift in Sources */,
 				5CE3916E204EB20500C27DC1 /* ProductCollectionViewCell.swift in Sources */,
 				5CE39170204EB20500C27DC1 /* Producto.swift in Sources */,
 				5CE3918E204EB20C00C27DC1 /* DetailsViewController.swift in Sources */,
