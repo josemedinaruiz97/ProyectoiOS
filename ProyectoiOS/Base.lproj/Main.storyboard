@@ -615,7 +615,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AQ2-GK-iaQ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CMb-MV-yG6">
                                     <size key="itemSize" width="375" height="72"/>
@@ -688,16 +688,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eke-qd-NR4"/>
                     </view>
-                    <navigationItem key="navigationItem" id="k5c-K8-Tfm">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="i9R-cC-ion">
-                            <connections>
-                                <segue destination="2nO-au-fJv" kind="unwind" unwindAction="volverTicketCollectionWithSender:" id="dN8-NY-VwL"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="k5c-K8-Tfm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pui-S3-Y3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="2nO-au-fJv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2261.5999999999999" y="1204.9475262368817"/>
         </scene>
@@ -823,24 +816,6 @@
             </objects>
             <point key="canvasLocation" x="-370" y="36"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="A9T-WK-uJx">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wrJ-rw-eC1" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WZt-ae-Kfi">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6MC-LF-Ql7" kind="relationship" relationship="rootViewController" id="XPj-dZ-ZUL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HpP-WC-Bd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1502" y="1704"/>
-        </scene>
     </scenes>
     <resources>
         <image name="icons8-plus-50" width="25" height="25"/>
@@ -849,6 +824,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="emF-P2-y7K"/>
-        <segue reference="XPj-dZ-ZUL"/>
     </inferredMetricsTieBreakers>
 </document>
