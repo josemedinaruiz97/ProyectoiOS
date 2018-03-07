@@ -888,25 +888,26 @@
                                     <!--2018-03-07 18:13:32 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg3-YT-75x">
-                                <rect key="frame" x="160" y="529" width="55" height="30"/>
-                                <state key="normal" title="Accept"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07u-9I-LgH">
+                                <rect key="frame" x="164" y="540" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="buttontpm:" destination="0OJ-Zx-E3v" eventType="touchUpInside" id="58k-8o-IWd"/>
+                                    <action selector="buttonAccept:" destination="0OJ-Zx-E3v" eventType="touchUpInside" id="S7s-iR-xgX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Goe-gG-OqU" firstAttribute="trailing" secondItem="FTH-he-AE5" secondAttribute="trailing" id="7bI-eg-NOu"/>
+                            <constraint firstItem="07u-9I-LgH" firstAttribute="top" secondItem="Goe-gG-OqU" secondAttribute="top" constant="520" id="FNP-pV-kQu"/>
                             <constraint firstItem="Goe-gG-OqU" firstAttribute="bottom" secondItem="FTH-he-AE5" secondAttribute="bottom" constant="225.5" id="GAl-Fg-552"/>
-                            <constraint firstItem="Goe-gG-OqU" firstAttribute="bottom" secondItem="Gg3-YT-75x" secondAttribute="bottom" constant="108" id="cEJ-wT-05V"/>
-                            <constraint firstItem="Goe-gG-OqU" firstAttribute="trailing" secondItem="Gg3-YT-75x" secondAttribute="trailing" constant="160" id="dcK-qV-anE"/>
+                            <constraint firstItem="07u-9I-LgH" firstAttribute="leading" secondItem="Goe-gG-OqU" secondAttribute="leading" constant="164" id="Iul-7D-G6l"/>
+                            <constraint firstItem="Goe-gG-OqU" firstAttribute="trailing" secondItem="07u-9I-LgH" secondAttribute="trailing" constant="165" id="YRl-yS-xkZ"/>
                             <constraint firstItem="FTH-he-AE5" firstAttribute="centerY" secondItem="2yM-xp-J5v" secondAttribute="centerY" id="ecF-Gy-v6H"/>
+                            <constraint firstItem="07u-9I-LgH" firstAttribute="centerX" secondItem="2yM-xp-J5v" secondAttribute="centerX" id="fVL-De-BND"/>
+                            <constraint firstItem="Goe-gG-OqU" firstAttribute="bottom" secondItem="07u-9I-LgH" secondAttribute="bottom" constant="97" id="g9n-Ur-ECa"/>
                             <constraint firstItem="FTH-he-AE5" firstAttribute="top" secondItem="Goe-gG-OqU" secondAttribute="top" constant="205.5" id="uo9-yk-KtL"/>
                             <constraint firstItem="FTH-he-AE5" firstAttribute="leading" secondItem="2yM-xp-J5v" secondAttribute="leading" id="yUN-Rh-Get"/>
-                            <constraint firstItem="Gg3-YT-75x" firstAttribute="top" secondItem="Goe-gG-OqU" secondAttribute="top" constant="509" id="zKf-8b-9Wm"/>
-                            <constraint firstItem="Gg3-YT-75x" firstAttribute="leading" secondItem="Goe-gG-OqU" secondAttribute="leading" constant="160" id="zv0-RV-e50"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Goe-gG-OqU"/>
                     </view>

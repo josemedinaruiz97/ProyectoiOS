@@ -22,14 +22,19 @@ class DateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func buttontpm(_ sender: Any) {
-        print("Pulsado")
+    @IBAction func buttonAccept(_ sender: Any) {
         datePicker.datePickerMode = UIDatePickerMode.date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let selectedDate = dateFormatter.string(from: datePicker.date)
         print(selectedDate)
     }
+    
+    /*datePicker.datePickerMode = UIDatePickerMode.date
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    let selectedDate = dateFormatter.string(from: datePicker.date)
+    print(selectedDate)*/
     /*
     // MARK: - Navigation
 
