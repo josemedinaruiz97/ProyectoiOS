@@ -8,11 +8,13 @@
 
 import UIKit
 
-class TicketViewCollection: UIViewController {
-    var arrayTickets:[Tickets]?
+class TicketViewCollection: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    @IBOutlet weak var collectionTicket: UICollectionView!
+    var arrayTicket : [Ticket]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +23,49 @@ class TicketViewCollection: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (self.arrayTicket?.count)!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell : TicketCell =  collectionView.dequeueReusableCell(withReuseIdentifier: "ticketCell", for: indexPath) as! TicketCell
+        
+        let seller = self.arrayTicket![indexPath.row].idmember
+        
+        //cell.indexPath = indexPath
+        
+        //cell.callBack = self
+        
+        cell.labelTicketCell.text = seller
+        cell.labelDateCell.text = self.arrayTicket![indexPath.row].date
+        cell.labelId.text = self.arrayTicket![indexPath.row].id
+        
+        return cell
+    }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        
+        guard let viewCellContent = segue.destination as? TicketViewDetail else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            //viewCellContent.contenido = send!
+        
     }
-    */
+    
+    @IBAction func volverTicketCollection(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? TicketViewDetail {
+            
+            
+        }
+    }
+ 
 
 }

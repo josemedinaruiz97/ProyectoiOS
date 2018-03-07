@@ -11,7 +11,7 @@ import UIKit
 open class ContainerViewController: UIViewController {
     var arrayProductos:[Producto]!
     var arrayFamilias:[Familia]!
-    var arrayTickets:[Tickets]!
+    var arrayTicket : [Ticket]!
     var token:String!
     var usuarioYContraseña: String!
     var cardProduct = [CardBakery]()
@@ -91,14 +91,9 @@ open class ContainerViewController: UIViewController {
                 self.cardProduct=datos.cardProduct
                 viewController.view.removeFromSuperview()
                 viewController = nil
-            }
-            let destino = segue.destination as? ViewController
-            destino?.productArray=self.arrayProductos
-            destino?.categoryArray=self.arrayFamilias
-            destino?.cardProduct=self.cardProduct
-            print("pepe1")*/
+            }*/
                 let destino = segue.destination as? TicketViewCollection
-                destino?.arrayTickets=self.arrayTickets
+                destino?.arrayTicket = self.arrayTicket
         }
             //Add to dictionary if isn't already there
             viewController = segue.destination
