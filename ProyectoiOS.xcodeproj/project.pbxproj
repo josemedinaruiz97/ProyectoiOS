@@ -15,6 +15,7 @@
 		38636CF82050385000AADD5E /* SellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38636CF72050385000AADD5E /* SellerCell.swift */; };
 		38636CFA2050406300AADD5E /* SellerViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38636CF92050406300AADD5E /* SellerViewDetail.swift */; };
 		38636CFC2050479100AADD5E /* TicketCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38636CFB2050479100AADD5E /* TicketCell2.swift */; };
+		3898BFD4205063E500B23E6B /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3898BFD3205063E500B23E6B /* DateViewController.swift */; };
 		38E0BE90204F22D1002E1851 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0BE8F204F22D1002E1851 /* TicketCell.swift */; };
 		38E0BE92204F24F0002E1851 /* TicketViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0BE91204F24F0002E1851 /* TicketViewCollection.swift */; };
 		5CDEF7542036DD6A003B66B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDEF7532036DD6A003B66B9 /* AppDelegate.swift */; };
@@ -68,6 +69,7 @@
 		38636CF72050385000AADD5E /* SellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerCell.swift; sourceTree = "<group>"; };
 		38636CF92050406300AADD5E /* SellerViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerViewDetail.swift; sourceTree = "<group>"; };
 		38636CFB2050479100AADD5E /* TicketCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell2.swift; sourceTree = "<group>"; };
+		3898BFD3205063E500B23E6B /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		38E0BE8F204F22D1002E1851 /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
 		38E0BE91204F24F0002E1851 /* TicketViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewCollection.swift; sourceTree = "<group>"; };
 		5CDEF7502036DD6A003B66B9 /* ProyectoiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +241,7 @@
 				385DCE7D204F5F4900D82078 /* TicketViewDetail.swift */,
 				38636CF52050360E00AADD5E /* SellerViewController.swift */,
 				38636CF92050406300AADD5E /* SellerViewDetail.swift */,
+				3898BFD3205063E500B23E6B /* DateViewController.swift */,
 			);
 			path = vista;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				5CE39184204EB20C00C27DC1 /* ViewController.swift in Sources */,
 				5CE3918C204EB20C00C27DC1 /* EmptySegue.swift in Sources */,
 				385DCE80204F68AB00D82078 /* TicketDetail.swift in Sources */,
+				3898BFD4205063E500B23E6B /* DateViewController.swift in Sources */,
 				38E0BE92204F24F0002E1851 /* TicketViewCollection.swift in Sources */,
 				5CE39187204EB20C00C27DC1 /* MainViewController.swift in Sources */,
 				5CE39172204EB20500C27DC1 /* ClienteHttp.swift in Sources */,

@@ -85,6 +85,7 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
             destino.arrayTicket = self.arrayTicket
             destino.arrayDetailTicket = self.arrayDetailTicket
             destino.arrayProductos = self.arrayProductos
+        case "dateView": break
         default:
             fatalError("Unexpected destination: \(segue.destination)")
         }
