@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TicketDetail{
+class TicketDetail:Codable{
     
     var id : String
     var idticket : String

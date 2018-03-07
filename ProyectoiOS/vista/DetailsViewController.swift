@@ -30,6 +30,7 @@ class DetailsViewController: UIViewController {
         labelCategory.text = productObject?.idfamily
         labelPrice.text = String(describing: productObject!.price) + " €"
         labelDescription.text = productObject?.description
+        imageProduct.downloadedFrom(link: (productObject?.id)!)
         
         scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: labelDescription.bottomAnchor).isActive = true
     }

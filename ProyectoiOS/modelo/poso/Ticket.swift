@@ -8,22 +8,15 @@
 
 import Foundation
 
-class Ticket{
+class Ticket: Codable{
     
     var id : String
     var date : String
     var idmember : String
-    var idclient : String
     
-    init(id: String, idmember: String, idcliente: String) {
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy' 'HH:mm"
-        let result = formatter.string(from: date)
-        
+    init(id: String, idmember: String, date:String ) {
         self.id = id
-        self.date = result
+        self.date = date
         self.idmember = idmember
-        self.idclient = idcliente
     }
 }

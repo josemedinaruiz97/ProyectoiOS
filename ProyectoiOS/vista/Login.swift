@@ -15,8 +15,8 @@ class Login: UIViewController, OnHttpResponse, UITextFieldDelegate{
     @IBOutlet weak var lError: UILabel!
     private var arrayProductos:[Producto]=Array()
     private var arrayFamilia:[Familia]=Array()
-    private var arrayTicket : [Ticket] = [Ticket(id: "1", idmember: "1", idcliente: ""), Ticket(id: "2", idmember: "2", idcliente: "")]
-    private var arrayDetailTicket : [TicketDetail] = [TicketDetail(id: "1", idticket: "1", idproduct: "1", quantity: "3", price: "1.5"), TicketDetail(id: "2", idticket: "2", idproduct: "2", quantity: "2", price: "0.5")]
+    private var arrayTicket : [Ticket]=Array() //= [Ticket(id: "1", idmember: "1"), Ticket(id: "2", idmember: "2")]
+    private var arrayDetailTicket : [TicketDetail] = Array()//[TicketDetail(id: "1", idticket: "1", idproduct: "1", quantity: "3", price: "1.5"), TicketDetail(id: "2", idticket: "2", idproduct: "2", quantity: "2", price: "0.5")]
     private var token:String!
     private var usuarioYContraseña:String!
     
@@ -65,16 +65,32 @@ class Login: UIViewController, OnHttpResponse, UITextFieldDelegate{
                 guard let cliente1 = ClienteHttp(target: "family", authorization: "Bearer " + token, responseObject: self) else {
                     return
                 }
+                guard let cliente2 = ClienteHttp(target: "ticket", authorization: "Bearer " + token, responseObject: self) else {
+                    return
+                }
+                guard let cliente3 = ClienteHttp(target: "ticketdetail", authorization: "Bearer " + token, responseObject: self) else {
+                    return
+                }
                 cliente1.request()
+                cliente2.request()
+                cliente3.request()
                 DispatchQueue.main.async {
                     UIApplication.shared.isNetworkActivityIndicatorVisible = true
                 }
             }
-            else{
+            else if(peticion=="family"){
                 arrayFamilia=try!JSONDecoder().decode([Familia].self, from:try! JSONSerialization.data(withJSONObject: respuesta["op"] ?? ""))
                 print(arrayFamilia)
-        }
-            if(arrayFamilia.count>0 && arrayProductos.count>0){
+            }
+            else if(peticion=="ticket"){
+                arrayTicket=try!JSONDecoder().decode([Ticket].self, from:try! JSONSerialization.data(withJSONObject: respuesta["op"] ?? ""))
+                print(arrayFamilia)
+            }
+            else if(peticion=="ticketdetail"){
+                arrayDetailTicket=try!JSONDecoder().decode([TicketDetail].self, from:try! JSONSerialization.data(withJSONObject: respuesta["op"] ?? ""))
+                print(arrayFamilia)
+            }
+            if(arrayFamilia.count>0 && arrayProductos.count>0 && arrayTicket.count>0 && arrayDetailTicket.count>0){
             performSegue(withIdentifier: "hello", sender:self)
             }
         
