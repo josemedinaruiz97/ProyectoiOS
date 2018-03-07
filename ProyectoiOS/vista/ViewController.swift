@@ -40,6 +40,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.view.addSubview(ProductCollectionView)
         self.view.addSubview(CategoryCollectionView)
         
+        let layout = self.ProductCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumInteritemSpacing = 2
+        layout.itemSize = CGSize(width: (self.ProductCollectionView.frame.size.width - 50)/2,height: ((self.ProductCollectionView.frame.size.height + 75)/3) )
+        
         if !cardProduct.isEmpty{
             for priceProduct in cardProduct{
                 totalPrice = totalPrice + (priceProduct.price! * Double(priceProduct.amount!))
@@ -95,6 +99,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 
                 selectedItem(collectionView: CategoryCollectionView, indexPath: indexPath, categoryCell: categoryCell)
             }
+            
+            categoryCell.layer.cornerRadius = 5
+            categoryCell.layer.borderColor = UIColor.black.cgColor
+            categoryCell.layer.borderWidth = 2
             
             return categoryCell
         }

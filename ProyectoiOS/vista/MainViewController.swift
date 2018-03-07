@@ -170,6 +170,19 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         detailsViewController.productObject = send
     }
     
+    @IBAction func btnCardPrepare(_ sender: UIButton) {
+        prepare(for segue: UIStoryboardSegue, for: Any?){
+            super.prepare(for: segue, sender: sender)
+            
+            guard cardTableViewController = segue.destination as? CardTableViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            cardTableViewController.cardProduct = cardProduct
+        }
+    }
+    
+    
     //MARK: Search actions
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
