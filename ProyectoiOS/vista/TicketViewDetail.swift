@@ -10,12 +10,20 @@ import UIKit
 
 class TicketViewDetail: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var id : Int?
-    var arrayTicketDetails : [TicketDetail]?
+    var id : String?
+    var arrayDetailTicket : [TicketDetail]?
+    var aux : [TicketDetail] = []
+    var arrayProductos : [Producto]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        for value in arrayDetailTicket! {
+            if(value.idticket == self.id!) {
+                aux.append(value)
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
 
@@ -29,11 +37,27 @@ class TicketViewDetail: UIViewController, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (self.arrayTicketDetails?.count)!
+        return self.aux.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        
+        let cell : DetailCell =  collectionView.dequeueReusableCell(withReuseIdentifier: "detailCell", for: indexPath) as! DetailCell
+        
+        let idproduct = self.aux[indexPath.row].idproduct
+        
+        var nameproduct : String?
+        for value in arrayProductos! {
+            if(value.id == self.aux[indexPath.row].idproduct){
+                nameproduct = value.product
+            }
+        }
+        
+        cell.labelIdProduct.text = idproduct
+        cell.labelName.text = nameproduct
+        cell.labelCantidad.text = "C: " + self.aux[indexPath.row].quantity
+        
+        return cell
     }
 
     /*

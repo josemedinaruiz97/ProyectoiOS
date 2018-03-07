@@ -11,3 +11,7 @@ import Foundation
 protocol callBack {
     func productDetails(indexPath : IndexPath)
 }
+
+protocol callBackTicket {
+    func passIdTicket(indexPath : IndexPath)
+}

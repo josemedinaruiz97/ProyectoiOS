@@ -11,8 +11,8 @@ import UIKit
 class SegmentedController: UIViewController {
     var container:ContainerViewController!
     var arrayProductos:[Producto]?
-    //var arrayTicket:[Ticket]?
     var arrayTicket : [Ticket]?
+    var arrayDetailTicket : [TicketDetail]?
     var arrayFamilias:[Familia]?
     var token:String!
     var usuarioYContraseña:String!
@@ -51,6 +51,7 @@ class SegmentedController: UIViewController {
             container.arrayProductos=self.arrayProductos
             container.arrayFamilias=self.arrayFamilias
             container.arrayTicket = self.arrayTicket
+            container.arrayDetailTicket = self.arrayDetailTicket
             container.viewDidLoad()
         }
     }

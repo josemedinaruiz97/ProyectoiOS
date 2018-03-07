@@ -12,6 +12,7 @@ open class ContainerViewController: UIViewController {
     var arrayProductos:[Producto]!
     var arrayFamilias:[Familia]!
     var arrayTicket : [Ticket]!
+    var arrayDetailTicket : [TicketDetail]!
     var token:String!
     var usuarioYContraseña: String!
     var cardProduct = [CardBakery]()
@@ -94,6 +95,8 @@ open class ContainerViewController: UIViewController {
             }*/
                 let destino = segue.destination as? TicketViewCollection
                 destino?.arrayTicket = self.arrayTicket
+                destino?.arrayDetailTicket = self.arrayDetailTicket
+                destino?.arrayProductos = self.arrayProductos
         }
             //Add to dictionary if isn't already there
             viewController = segue.destination

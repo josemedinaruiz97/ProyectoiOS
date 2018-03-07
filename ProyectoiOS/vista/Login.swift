@@ -16,7 +16,7 @@ class Login: UIViewController, OnHttpResponse, UITextFieldDelegate{
     private var arrayProductos:[Producto]=Array()
     private var arrayFamilia:[Familia]=Array()
     private var arrayTicket : [Ticket] = [Ticket(id: "1", idmember: "1", idcliente: ""), Ticket(id: "2", idmember: "2", idcliente: "")]
-    /*private var arrayTicket: [Ticket] = [Ticket(seller: "Juanjo", basket: [CardBakery(name: "Bollo", category: "Prueba", price: 1.5, amount: 1)])]*/
+    private var arrayDetailTicket : [TicketDetail] = [TicketDetail(id: "1", idticket: "1", idproduct: "1", quantity: "3", price: "1.5"), TicketDetail(id: "2", idticket: "2", idproduct: "2", quantity: "2", price: "0.5")]
     private var token:String!
     private var usuarioYContraseña:String!
     
@@ -101,6 +101,7 @@ class Login: UIViewController, OnHttpResponse, UITextFieldDelegate{
         destino?.arrayFamilias=self.arrayFamilia
         destino?.token=self.token
         destino?.arrayTicket = self.arrayTicket
+        destino?.arrayDetailTicket = self.arrayDetailTicket
         destino?.usuarioYContraseña=self.usuarioYContraseña
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -8,10 +8,14 @@
 
 import UIKit
 
-class TicketViewCollection: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class TicketViewCollection: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, callBackTicket {
     
     @IBOutlet weak var collectionTicket: UICollectionView!
+    
     var arrayTicket : [Ticket]?
+    var arrayDetailTicket : [TicketDetail]?
+    var arrayProductos : [Producto]?
+    var id : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +40,9 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
         
         let seller = self.arrayTicket![indexPath.row].idmember
         
-        //cell.indexPath = indexPath
+        cell.indexPath = indexPath
         
-        //cell.callBack = self
+        cell.callBack = self
         
         cell.labelTicketCell.text = seller
         cell.labelDateCell.text = self.arrayTicket![indexPath.row].date
@@ -47,17 +51,24 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
         return cell
     }
 
+    func passIdTicket(indexPath: IndexPath) {
+        let cell : TicketCell = collectionTicket!.cellForItem(at: indexPath) as! TicketCell
+        self.id = cell.labelId.text
+    }
+    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        
+        if(segue.identifier == "detailTicketView"){
         guard let viewCellContent = segue.destination as? TicketViewDetail else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             
-            //viewCellContent.contenido = send!
-        
+            viewCellContent.arrayDetailTicket = self.arrayDetailTicket
+            viewCellContent.id = self.id
+            viewCellContent.arrayProductos = self.arrayProductos
+        }
     }
     
     @IBAction func volverTicketCollection(sender: UIStoryboardSegue) {
