@@ -12,10 +12,10 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var collectionTicket: UICollectionView!
     
-    var arrayTicket : [Ticket]?
-    var arrayDetailTicket : [TicketDetail]?
-    var arrayProductos : [Producto]?
-    var id : String?
+    var arrayTicket: [Ticket]?
+    var arrayDetailTicket: [TicketDetail]?
+    var arrayProductos: [Producto]?
+    var id: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +44,15 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
         
         cell.callBack = self
         
+        let isoDate = self.arrayTicket![indexPath.row].date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let date = dateFormatter.date(from: isoDate)!
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let result = dateFormatter.string(from: date)
+        
         cell.labelTicketCell.text = seller
-        cell.labelDateCell.text = self.arrayTicket![indexPath.row].date
+        cell.labelDateCell.text = result
         cell.labelId.text = self.arrayTicket![indexPath.row].id
         
         return cell
