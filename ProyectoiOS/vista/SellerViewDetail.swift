@@ -17,7 +17,8 @@ class SellerViewDetail: UIViewController, UICollectionViewDataSource, UICollecti
     var arrayDetailTicket: [TicketDetail]?
     var arrayProductos: [Producto]?
     var aux: [Ticket]? = []
-    var id : String?
+    var id: String?
+    var idsend: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,11 +70,28 @@ class SellerViewDetail: UIViewController, UICollectionViewDataSource, UICollecti
     }
     
     func passIdTicket(indexPath: IndexPath) {
-        let cell : TicketCell = sellerTicketCollection!.cellForItem(at: indexPath) as! TicketCell
-        self.id = cell.labelId.text
+        let cell : TicketCell2 = sellerTicketCollection!.cellForItem(at: indexPath) as! TicketCell2
+        self.idsend = cell.labelId.text
     }
 
     // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch (segue.identifier ?? "") {
+        case "sinceSeller":
+            guard let destino = segue.destination as? TicketViewDetail else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            destino.arrayDetailTicket = self.arrayDetailTicket
+            destino.id = self.idsend
+            destino.arrayProductos = self.arrayProductos
+        default:
+            fatalError("Unexpected destination: \(segue.destination)")
+        }
+    }
 
 
 }
