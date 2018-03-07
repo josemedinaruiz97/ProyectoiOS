@@ -27,4 +27,17 @@ class CardTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    var callBackCard: callBackCard? = nil
+    
+    var indexPath: IndexPath!
+    var amount: Int!
+    var price: Double!
+    
+    @IBAction func stepperProductAmount(_ sender: UIStepper) {
+        amount = Int(sender.value)
+        
+        cardProductAmount.text = String(amount)
+        
+        callBackCard?.addAmount(indexPath: indexPath, amount: amount)
+    }
 }

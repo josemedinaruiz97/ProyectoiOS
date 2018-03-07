@@ -163,25 +163,31 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        guard let detailsViewController = segue.destination as? DetailsViewController else {
+        /*guard let detailsViewController = segue.destination as? DetailsViewController else {
             fatalError("Unexpected destination: \(segue.destination)")
         }
         
-        detailsViewController.productObject = send
-    }
-    
-    @IBAction func btnCardPrepare(_ sender: UIButton) {
-        prepare(for segue: UIStoryboardSegue, for: Any?){
-            super.prepare(for: segue, sender: sender)
-            
-            guard cardTableViewController = segue.destination as? CardTableViewController else {
+        detailsViewController.productObject = send*/
+        
+        switch (segue.identifier ?? "") {
+        case "maincard":
+            print(segue.identifier)
+            guard let cardViewController = segue.destination as? CardTableViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            print(cardProduct)
+            cardViewController.cardProduct = self.cardProduct
+        case "MainSegueDetails":
+            guard let detailsViewController = segue.destination as? DetailsViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             
-            cardTableViewController.cardProduct = cardProduct
+            detailsViewController.productObject = send
+        default:
+            fatalError("Unexpected destination: \(segue.destination)")
         }
+        
     }
-    
     
     //MARK: Search actions
     func updateSearchResults(for searchController: UISearchController) {

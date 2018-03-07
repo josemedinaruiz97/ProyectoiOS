@@ -214,7 +214,7 @@
                                                             <state key="normal" image="icons8-plus-50"/>
                                                             <connections>
                                                                 <action selector="btnDetailsMain:" destination="WTy-qr-Pnx" eventType="touchUpInside" id="PrV-et-n4r"/>
-                                                                <segue destination="iFi-77-cnb" kind="show" id="7sa-Lu-ExS"/>
+                                                                <segue destination="iFi-77-cnb" kind="show" identifier="MainSegueDetails" id="7sa-Lu-ExS"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -265,8 +265,7 @@
                                         </constraints>
                                         <state key="normal" image="icons8-shopping-cart-filled-50"/>
                                         <connections>
-                                            <action selector="btnCardPrepare:" destination="rED-2e-yHm" eventType="touchUpInside" id="vJS-dR-nHk"/>
-                                            <segue destination="7e7-U2-wvZ" kind="show" id="LZN-tW-OCx"/>
+                                            <segue destination="7e7-U2-wvZ" kind="show" identifier="maincard" id="LZN-tW-OCx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -323,9 +322,6 @@
                                         <state key="normal" image="icons8-shopping-cart-filled-50">
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="7e7-U2-wvZ" kind="show" id="9TZ-jb-l7z"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92547765544041449" green="0.92547765544041449" blue="0.92547765544041449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -354,7 +350,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjj-rF-dPK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="84" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="85" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -415,7 +411,7 @@
                                                             </state>
                                                             <connections>
                                                                 <action selector="btnDetails:" destination="zb4-cD-otv" eventType="touchUpInside" id="qx6-8D-mRa"/>
-                                                                <segue destination="iFi-77-cnb" kind="show" id="emF-P2-y7K"/>
+                                                                <segue destination="iFi-77-cnb" kind="show" identifier="CatSegueDetails" id="emF-P2-y7K"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -492,7 +488,7 @@
                                 <rect key="frame" x="8" y="28" width="359" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="l1e-MI-AkS" customClass="CardTableViewCell" customModule="ProyectoiOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCellTable" id="l1e-MI-AkS" customClass="CardTableViewCell" customModule="ProyectoiOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="359" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l1e-MI-AkS" id="7q5-VW-DgN">
@@ -513,6 +509,9 @@
                                                 </label>
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="18J-eP-i1c">
                                                     <rect key="frame" x="172" y="7" width="94" height="29"/>
+                                                    <connections>
+                                                        <action selector="stepperProductAmount:" destination="l1e-MI-AkS" eventType="valueChanged" id="SN1-Vh-bEF"/>
+                                                    </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1m-cO-vdK">
                                                     <rect key="frame" x="282" y="10" width="62" height="21"/>
@@ -720,6 +719,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7sa-Lu-ExS"/>
-        <segue reference="LZN-tW-OCx"/>
     </inferredMetricsTieBreakers>
 </document>

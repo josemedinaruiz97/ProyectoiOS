@@ -8,7 +8,8 @@
 
 import UIKit
 
-class CardTableViewController: UITableViewController {
+class CardTableViewController: UITableViewController, callBackCard {
+    
     
     //MARK: Properties
     
@@ -17,10 +18,19 @@ class CardTableViewController: UITableViewController {
     @IBOutlet weak var labelTotalCard: UILabel!
     
     var cardProduct = [CardBakery]()
+    var totalPrice: Double = 0.0
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !cardProduct.isEmpty{
+            for priceProduct in cardProduct{
+                totalPrice = totalPrice + (priceProduct.price! * Double(priceProduct.amount!))
+            }
+            
+            labelTotalCard.text = "Total " + String(totalPrice) + "€"
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -38,23 +48,47 @@ class CardTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return cardProduct.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let productCell: CardTableViewCell = tableView.dequeueReusableCell(withIdentifier: "productCellTable", for: indexPath) as! CardTableViewCell
 
-        // Configure the cell...
+        productCell.cardProductTable.text = cardProduct[indexPath.row].name
+        productCell.cardProductAmount.text = String(cardProduct[indexPath.row].amount!)
+        productCell.cardProductTotal.text = String(cardProduct[indexPath.row].price! * Double(cardProduct[indexPath.row].amount!))
+        
 
-        return cell
+        return productCell
     }
-    */
+    
+    func addAmount(indexPath: IndexPath, amount: Int) {
+        let cell : CardTableViewCell = cardTableView!.cellForRow(at: indexPath) as! CardTableViewCell
+        cardProduct[indexPath.row].amount = amount
+        let price: Double = Double(cardProduct[indexPath.row].price!)
+        
+        let pTotal: Double = price * Double(amount)
+        cell.cardProductTotal.text = String(pTotal)
+        cell.cardProductAmount.text = String(amount)
+        
+        if amount == 0 {
+            cardProduct.remove(at: indexPath.row)
+        }
+        
+        cardTableView.reloadData()
+        
+    }
+    
+    func delAmount(id: Int, idCell: IndexPath) {
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -83,13 +117,13 @@ class CardTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
+    
 
     /*
     // MARK: - Navigation
