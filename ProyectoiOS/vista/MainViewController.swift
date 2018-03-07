@@ -53,6 +53,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         // Do any additional setup after loading the view.
         
         if !cardProduct.isEmpty{
+            totalPrice=0
             for priceProduct in cardProduct{
                 totalPrice = totalPrice + (priceProduct.price! * Double(priceProduct.amount!))
             }
@@ -108,6 +109,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
         
         prodcutCell.productTilteMain.text = product.product
+        prodcutCell.productImageMain.downloadedFrom(link: product.id)
         
         prodcutCell.indexPath = indexPath
         
