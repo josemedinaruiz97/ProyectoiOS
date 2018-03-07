@@ -67,23 +67,27 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        if(segue.identifier == "detailTicketView"){
-        guard let viewCellContent = segue.destination as? TicketViewDetail else {
+        
+        switch (segue.identifier ?? "") {
+        case "detailTicketView":
+            guard let viewCellContent = segue.destination as? TicketViewDetail else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             
             viewCellContent.arrayDetailTicket = self.arrayDetailTicket
             viewCellContent.id = self.id
             viewCellContent.arrayProductos = self.arrayProductos
+        case "sellerView":
+            guard let destino = segue.destination as? SellerViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            destino.arrayTicket = self.arrayTicket
+            destino.arrayDetailTicket = self.arrayDetailTicket
+            destino.arrayProductos = self.arrayProductos
+        default:
+            fatalError("Unexpected destination: \(segue.destination)")
         }
     }
     
-    @IBAction func volverTicketCollection(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? TicketViewDetail {
-            
-            
-        }
-    }
- 
-
 }
