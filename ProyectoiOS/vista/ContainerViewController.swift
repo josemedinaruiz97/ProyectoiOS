@@ -97,6 +97,13 @@ open class ContainerViewController: UIViewController {
             }else if(segue.identifier=="tercera"){
 
                 if viewController != nil{
+                    if anterior == "primera"{
+                        let datos=try? viewController as! MainViewController
+                        try? self.cardProduct=(datos?.cardProduct)!
+                    }else{
+                        let datos=try? viewController as! ViewController
+                        try? self.cardProduct=(datos?.cardProduct)!
+                    }
                     viewController.view.removeFromSuperview()
                     viewController = nil
                 }

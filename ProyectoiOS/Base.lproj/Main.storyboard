@@ -103,7 +103,7 @@
             </objects>
             <point key="canvasLocation" x="-1081" y="18"/>
         </scene>
-        <!--Segmented Controller-->
+        <!--Backery-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SegmentedController" customModule="ProyectoiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,7 +140,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zXe-jf-L0a"/>
+                    <navigationItem key="navigationItem" title="Backery" id="zXe-jf-L0a"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -615,7 +615,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AQ2-GK-iaQ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CMb-MV-yG6">
                                     <size key="itemSize" width="375" height="72"/>
@@ -849,6 +849,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="emF-P2-y7K"/>
-        <segue reference="AMP-kS-OSp"/>
+        <segue reference="XPj-dZ-ZUL"/>
     </inferredMetricsTieBreakers>
 </document>
