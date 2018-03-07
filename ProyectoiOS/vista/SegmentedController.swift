@@ -10,12 +10,12 @@ import UIKit
 
 class SegmentedController: UIViewController {
     var container:ContainerViewController!
-    var arrayProductos:[Producto]?
-    var arrayTicket : [Ticket]?
-    var arrayDetailTicket : [TicketDetail]?
-    var arrayFamilias:[Familia]?
-    var token:String!
-    var usuarioYContraseña:String!
+    var arrayProductos: [Producto]?
+    var arrayTicket: [Ticket]?
+    var arrayDetailTicket: [TicketDetail]?
+    var arrayFamilias: [Familia]?
+    var token: String!
+    var usuarioYContraseña: String!
     @IBAction func accion(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
