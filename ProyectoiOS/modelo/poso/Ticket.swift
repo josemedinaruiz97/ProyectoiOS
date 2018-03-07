@@ -19,4 +19,12 @@ class Ticket: Codable{
         self.date = date
         self.idmember = idmember
     }
+    convenience init(id: String, idmember: String) {
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy' 'HH:mm"
+        let result = formatter.string(from: date)
+        self.init(id: id,idmember: idmember,date: result)
+    }
 }
