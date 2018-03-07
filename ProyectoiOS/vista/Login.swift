@@ -15,7 +15,8 @@ class Login: UIViewController, OnHttpResponse, UITextFieldDelegate{
     @IBOutlet weak var lError: UILabel!
     private var arrayProductos:[Producto]=Array()
     private var arrayFamilia:[Familia]=Array()
-    private var arrayTickets:[Tickets]=[Tickets(id: "1",date: "6/3/2018",idmember: "1",idcliente: ""),Tickets(id: "2",date: "7/3/2018",idmember: "2",idcliente: "")]
+    private var arrayTicket : [Ticket] = [Ticket(id: "1", idmember: "1", idcliente: ""), Ticket(id: "2", idmember: "2", idcliente: "")]
+    private var arrayDetailTicket : [TicketDetail] = [TicketDetail(id: "1", idticket: "1", idproduct: "1", quantity: "3", price: "1.5"), TicketDetail(id: "2", idticket: "2", idproduct: "2", quantity: "2", price: "0.5")]
     private var token:String!
     private var usuarioYContraseña:String!
     
@@ -99,7 +100,8 @@ class Login: UIViewController, OnHttpResponse, UITextFieldDelegate{
         destino?.arrayProductos=self.arrayProductos
         destino?.arrayFamilias=self.arrayFamilia
         destino?.token=self.token
-        destino?.arrayTickets=self.arrayTickets
+        destino?.arrayTicket = self.arrayTicket
+        destino?.arrayDetailTicket = self.arrayDetailTicket
         destino?.usuarioYContraseña=self.usuarioYContraseña
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

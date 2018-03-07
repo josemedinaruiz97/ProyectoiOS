@@ -11,7 +11,8 @@ import UIKit
 open class ContainerViewController: UIViewController {
     var arrayProductos:[Producto]!
     var arrayFamilias:[Familia]!
-    var arrayTickets:[Tickets]!
+    var arrayTicket : [Ticket]!
+    var arrayDetailTicket : [TicketDetail]!
     var token:String!
     var usuarioYContraseña: String!
     var cardProduct = [CardBakery]()
@@ -94,13 +95,16 @@ open class ContainerViewController: UIViewController {
                 print("pepe1")
                 print(cardProduct)
             }else if(segue.identifier=="tercera"){
+
                 if viewController != nil{
                     viewController.view.removeFromSuperview()
                     viewController = nil
                 }
                 anterior="tercera"
                 let destino = segue.destination as? TicketViewCollection
-                destino?.arrayTickets=self.arrayTickets
+                destino?.arrayTicket = self.arrayTicket
+                destino?.arrayDetailTicket = self.arrayDetailTicket
+                destino?.arrayProductos = self.arrayProductos
         }
             //Add to dictionary if isn't already there
             viewController = segue.destination

@@ -9,22 +9,21 @@
 import Foundation
 
 class Ticket{
-    var seller : String?
-    var basket : [CardBakery]?
-    var date : String?
     
-    init(){
-        
-    }
+    var id : String
+    var date : String
+    var idmember : String
+    var idclient : String
     
-    init(seller: String, basket: [CardBakery]){
+    init(id: String, idmember: String, idcliente: String) {
         let date = Date()
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
+        formatter.dateFormat = "dd.MM.yyyy' 'HH:mm"
         let result = formatter.string(from: date)
         
-        self.seller = seller
-        self.basket = basket
+        self.id = id
         self.date = result
+        self.idmember = idmember
+        self.idclient = idcliente
     }
 }
