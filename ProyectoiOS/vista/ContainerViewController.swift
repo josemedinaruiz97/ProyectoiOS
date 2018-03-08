@@ -9,14 +9,14 @@
 import UIKit
 
 open class ContainerViewController: UIViewController {
-    var arrayProductos:[Producto]!
-    var arrayFamilias:[Familia]!
+    var arrayProductos: [Producto]!
+    var arrayFamilias: [Familia]!
     var arrayTicket : [Ticket]!
     var arrayDetailTicket : [TicketDetail]!
-    var token:String!
+    var token: String!
     var usuarioYContraseña: String!
     var cardProduct = [CardBakery]()
-    var anterior=""
+    var anterior = ""
     //Manipulating container views
     fileprivate weak var viewController : UIViewController!
     /** Pass in a tuple of required TimeInterval with UIViewAnimationOptions */
@@ -74,9 +74,15 @@ open class ContainerViewController: UIViewController {
                     viewController = nil
                 }
                 anterior="primera"
+                print(token)
                 let destino = segue.destination as? MainViewController
                 destino?.productArray=self.arrayProductos
                 destino?.cardProduct=self.cardProduct
+                destino?.arrayFamilias=self.arrayFamilias
+                destino?.arrayTicket=self.arrayTicket
+                destino?.arrayDetailTicket=self.arrayDetailTicket
+                destino?.token=self.token
+                destino?.usuarioYContraseña=self.usuarioYContraseña
                 print("pepe")
             }else if(segue.identifier=="segunda"){
                 if viewController != nil{
@@ -90,12 +96,16 @@ open class ContainerViewController: UIViewController {
                 anterior="segunda"
                 let destino = segue.destination as? ViewController
                 destino?.productArray=self.arrayProductos
-                destino?.categoryArray=self.arrayFamilias
                 destino?.cardProduct=self.cardProduct
+                destino?.categoryArray=self.arrayFamilias
+                destino?.arrayTicket=self.arrayTicket
+                destino?.arrayDetailTicket=self.arrayDetailTicket
+                destino?.token=self.token
+                destino?.usuarioYContraseña=self.usuarioYContraseña
                 print("pepe1")
                 print(cardProduct)
             }else if(segue.identifier=="tercera"){
-
+                
                 if viewController != nil{
                     if anterior == "primera"{
                         let datos=try? viewController as! MainViewController
@@ -112,7 +122,7 @@ open class ContainerViewController: UIViewController {
                 destino?.arrayTicket = self.arrayTicket
                 destino?.arrayDetailTicket = self.arrayDetailTicket
                 destino?.arrayProductos = self.arrayProductos
-        }
+            }
             //Add to dictionary if isn't already there
             viewController = segue.destination
             UIView.transition(with: self.view, duration: animationDurationWithOptions.0, options: animationDurationWithOptions.1, animations: {
@@ -124,7 +134,7 @@ open class ContainerViewController: UIViewController {
             })
             
         }
-
+        
         //destino?.=self.arrayFamilia
         //destino?.token=self.token
         //destino?.usuarioYContraseña=self.usuarioYContraseña

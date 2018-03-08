@@ -19,6 +19,11 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var productArray:[Producto]?
     var cardProduct = [CardBakery]()
+    var arrayFamilias:[Familia]!
+    var arrayTicket : [Ticket]!
+    var arrayDetailTicket : [TicketDetail]!
+    var token:String!
+    var usuarioYContraseña: String!
     
     //MARK: Search properties
     let searchController = UISearchController(searchResultsController: nil)
@@ -164,12 +169,33 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        
-        guard let detailsViewController = segue.destination as? DetailsViewController else {
-            fatalError("Unexpected destination: \(segue.destination)")
+        switch segue.identifier {
+        case "mainCard"?:
+            let des = segue.destination as? UINavigationController
+            let destino = des?.viewControllers.first as? CardCollectionViewController
+            /*guard let cardViewController = segue.destination as? CardViewController else {
+             fatalError("Unexpected destination: \(segue.destination)")
+             }*/
+            print(token)
+            destino?.arrayProductos=self.productArray
+            destino?.cardArray=self.cardProduct
+            destino?.arrayFamilias=self.arrayFamilias
+            destino?.arrayTicket=self.arrayTicket
+            destino?.arrayDetailTicket=self.arrayDetailTicket
+            destino?.token=self.token
+            destino?.usuarioYContraseña=self.usuarioYContraseña
+            break
+        case "mainDetail"?:
+            guard let detailsViewController = segue.destination as? DetailsViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            detailsViewController.productObject = send
+            break
+        default:
+            print("")
+            break
         }
-        
-        detailsViewController.productObject = send
     }
     
     //MARK: Search actions

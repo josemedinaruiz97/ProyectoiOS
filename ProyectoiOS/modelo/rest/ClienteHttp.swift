@@ -15,7 +15,7 @@ class ClienteHttp {
     // method - GET, POST, PUT, DELETE
     // en data le pasas un diccionario con los datos que se quieren pasar en el body (los datos de json), any puede ser cualquier valor
     init?(target: String, authorization: String, responseObject: OnHttpResponse,
-          _ method: String = "GET", _ data : [String:Any] = [:]) {
+          _ method: String = "GET", _ data : [CardBakery] = Array()) {
         
         guard let url = URL(string: self.urlApi + target) else {
             return nil
@@ -26,20 +26,25 @@ class ClienteHttp {
         self.urlPeticion.httpMethod = method
         self.urlPeticion.addValue("application/json", forHTTPHeaderField: "Content-Type")
         self.urlPeticion.addValue(authorization, forHTTPHeaderField: "Authorization")
+        print("hola")
         if method != "GET" && data.count > 0 {
-            guard let json = RestJsonUtil.dictToJson(data: data) else {
+            print("hola1")
+            guard let json = try? JSONEncoder().encode(data) else {
                 return nil
             }
+            print(json)
+            print("hola2")
             self.urlPeticion.httpBody = json
         }
         
-
+        
     }
     
     // crear el objeto y lanzar la petición
     // doInBackground
     func request() {
         // Iniciar el símbolo de red
+        print("hola3")
         let sesion = URLSession(configuration: URLSessionConfiguration.default)
         let task = sesion.dataTask(with: self.urlPeticion,
                                    completionHandler: self.callBack)
@@ -50,7 +55,7 @@ class ClienteHttp {
     private func callBack(_ data: Data?, _ response: URLResponse?, _ error: Error?) {
         // Conexión asíncrona a la hebra principal
         DispatchQueue.main.async {
-        // Finalizar el símbolo de red
+            // Finalizar el símbolo de red
             guard error == nil else {
                 self.respuesta.onErrorReceivingData(message: "error")
                 return

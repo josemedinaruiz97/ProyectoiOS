@@ -13,10 +13,10 @@ class Login: UIViewController, OnHttpResponse, UITextFieldDelegate{
     @IBOutlet weak var tilLogin: UITextField!
     @IBOutlet weak var tilPassword: UITextField!
     @IBOutlet weak var lError: UILabel!
-    private var arrayProductos:[Producto]=Array()
-    private var arrayFamilia:[Familia]=Array()
-    private var arrayTicket : [Ticket]=Array() //= [Ticket(id: "1", idmember: "1"), Ticket(id: "2", idmember: "2")]
-    private var arrayDetailTicket : [TicketDetail] = Array()//[TicketDetail(id: "1", idticket: "1", idproduct: "1", quantity: "3", price: "1.5"), TicketDetail(id: "2", idticket: "2", idproduct: "2", quantity: "2", price: "0.5")]
+    private var arrayProductos: [Producto] = Array()
+    private var arrayFamilia: [Familia] = Array()
+    private var arrayTicket: [Ticket]=Array() //= [Ticket(id: "1", idmember: "1"), Ticket(id: "2", idmember: "2")]
+    private var arrayDetailTicket: [TicketDetail] = Array()//[TicketDetail(id: "1", idticket: "1", idproduct: "1", quantity: "3", price: "1.5"), TicketDetail(id: "2", idticket: "2", idproduct: "2", quantity: "2", price: "0.5")]
     private var token:String!
     private var usuarioYContraseña:String!
     
@@ -91,7 +91,7 @@ class Login: UIViewController, OnHttpResponse, UITextFieldDelegate{
                 print(arrayFamilia)
             }
             if(arrayFamilia.count>0 && arrayProductos.count>0 && arrayTicket.count>0 && arrayDetailTicket.count>0){
-            performSegue(withIdentifier: "hello", sender:self)
+            performSegue(withIdentifier: "segueLogue", sender:self)
             }
         
         }else{

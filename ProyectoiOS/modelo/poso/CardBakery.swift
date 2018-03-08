@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CardBakery{
+class CardBakery: Codable{
     var name: String?
     var category: String?
     var price: Double?

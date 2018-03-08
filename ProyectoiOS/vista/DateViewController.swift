@@ -9,11 +9,17 @@
 import UIKit
 
 class DateViewController: UIViewController {
-    
+
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+    var arrayTicket: [Ticket]?
+    var arrayProductos: [Producto]?
+    var arrayDetailTicket: [TicketDetail]?
+    var seletedDate: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
@@ -26,23 +32,27 @@ class DateViewController: UIViewController {
         datePicker.datePickerMode = UIDatePickerMode.date
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        let selectedDate = dateFormatter.string(from: datePicker.date)
-        print(selectedDate)
+        seletedDate = dateFormatter.string(from: datePicker.date)
     }
     
-    /*datePicker.datePickerMode = UIDatePickerMode.date
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd"
-    let selectedDate = dateFormatter.string(from: datePicker.date)
-    print(selectedDate)*/
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        
+        switch (segue.identifier ?? "") {
+        case "dateViewCollection":
+            guard let destino = segue.destination as? DateViewCollection else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            destino.arrayTicket = self.arrayTicket
+            destino.arrayDetailTicket = self.arrayDetailTicket
+            destino.seletedDate = self.seletedDate
+            destino.arrayProductos = self.arrayProductos
+        default:
+            fatalError("Unexpected destination: \(segue.destination)")
+        }
     }
-    */
 
 }
