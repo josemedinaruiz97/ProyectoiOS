@@ -10,42 +10,23 @@ import UIKit
 
 class SegmentedController: UIViewController {
     var container:ContainerViewController!
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     var arrayProductos:[Producto]?
     var cardArray:[CardBakery]=Array()
-=======
-    var arrayProductos:[Producto]?
->>>>>>> parent of 0497823... Merge pull request #3 from josemedinaruiz97/JJ_02
-=======
-    var arrayProductos:[Producto]?
->>>>>>> parent of 8b17b86... post hecho
+
     var arrayTicket : [Ticket]?
     var arrayDetailTicket : [TicketDetail]?
     var arrayFamilias:[Familia]?
     var token:String!
     var usuarioYContraseña:String!
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
+
     var arrayProductos: [Producto]?
     var arrayTicket: [Ticket]?
     var arrayDetailTicket: [TicketDetail]?
     var arrayFamilias: [Familia]?
     var token: String!
     var usuarioYContraseña: String!
-<<<<<<< HEAD
->>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
-=======
->>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
-=======
->>>>>>> parent of 0497823... Merge pull request #3 from josemedinaruiz97/JJ_02
-=======
->>>>>>> parent of 8b17b86... post hecho
+
     @IBAction func accion(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:

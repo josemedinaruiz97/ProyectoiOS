@@ -472,10 +472,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNl-Dc-0yO" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             <point key="canvasLocation" x="2600.8000000000002" y="438.53073463268368"/>
-<<<<<<< HEAD
+
         </scene>
         <!--Card View Controller-->
         <scene sceneID="vKN-3r-x9V">
@@ -576,14 +575,8 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ao-sV-c7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3310" y="1149"/>
-=======
->>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
-=======
+
             <point key="canvasLocation" x="2262" y="439"/>
->>>>>>> parent of 0497823... Merge pull request #3 from josemedinaruiz97/JJ_02
-=======
-            <point key="canvasLocation" x="2262" y="439"/>
->>>>>>> parent of 8b17b86... post hecho
         </scene>
         <!--Ticket View Collection-->
         <scene sceneID="P7M-DS-iDL">
@@ -699,9 +692,7 @@
                                     <outlet property="delegate" destination="XVc-dn-mP4" id="SgU-Oe-9ye"/>
                                 </connections>
                             </collectionView>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6m-zl-lqV">
                                 <rect key="frame" x="40" y="45" width="85" height="30"/>
                                 <state key="normal" title="Seller"/>
@@ -716,9 +707,7 @@
                                     <segue destination="0OJ-Zx-E3v" kind="show" identifier="dateView" id="0pc-L9-ilQ"/>
                                 </connections>
                             </button>
->>>>>>> parent of df373f4... PC
-=======
->>>>>>> parent of 8b17b86... post hecho
+
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -735,10 +724,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ta-Jx-aAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <point key="canvasLocation" x="1501.5999999999999" y="888.30584707646187"/>
-=======
+
             <point key="canvasLocation" x="1840.8" y="888.30584707646187"/>
         </scene>
         <!--Seller View Detail-->
@@ -1014,13 +1000,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJ3-KI-tSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1841" y="1662"/>
-<<<<<<< HEAD
->>>>>>> parent of df373f4... PC
-=======
->>>>>>> parent of df373f4... PC
-=======
+
             <point key="canvasLocation" x="1501.5999999999999" y="888.30584707646187"/>
->>>>>>> parent of 8b17b86... post hecho
+
         </scene>
         <!--Ticket View Detail-->
         <scene sceneID="Thf-ue-sC3">
@@ -1232,59 +1214,47 @@
             </objects>
             <point key="canvasLocation" x="-370" y="36"/>
         </scene>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         <!--Navigation Controller-->
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         <scene sceneID="713-6a-ig3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9qr-Ni-acR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="etg-cn-JoN">
-=======
-=======
->>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
+
+
         <scene sceneID="8KU-9G-70W">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yEJ-Nj-VNv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fjE-bp-NAx">
-<<<<<<< HEAD
->>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
-=======
->>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
+
+
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                         <segue destination="87u-cg-gl8" kind="relationship" relationship="rootViewController" id="lBx-YY-2OD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UI3-yB-z8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3558" y="439"/>
-=======
-=======
->>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
+
+
                         <segue destination="XVc-dn-mP4" kind="relationship" relationship="rootViewController" id="21H-aD-Cj7"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6b-mx-cwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1001" y="888"/>
-<<<<<<< HEAD
->>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
-=======
->>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
+
+
         </scene>
-=======
->>>>>>> parent of 0497823... Merge pull request #3 from josemedinaruiz97/JJ_02
-=======
->>>>>>> parent of 8b17b86... post hecho
+
     </scenes>
     <resources>
         <image name="icons8-plus-50" width="25" height="25"/>
@@ -1293,16 +1263,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="emF-P2-y7K"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of df373f4... PC
+
         <segue reference="AMP-kS-OSp"/>
         <segue reference="wWB-kD-Y6S"/>
->>>>>>> parent of df373f4... PC
-=======
->>>>>>> parent of 8b17b86... post hecho
+
     </inferredMetricsTieBreakers>
 </document>
