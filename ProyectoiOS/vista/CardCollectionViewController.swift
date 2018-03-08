@@ -38,7 +38,7 @@ class CardCollectionViewController: UICollectionViewController, OnHttpResponse{
     }
     
     func onErrorReceivingData(message: String) {
-        performSegue(withIdentifier: "segueReturn", sender:self)
+        
         
     }
     
@@ -58,6 +58,7 @@ class CardCollectionViewController: UICollectionViewController, OnHttpResponse{
     }
     
     @IBAction func btnCancelar(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "segueReturn", sender:self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
