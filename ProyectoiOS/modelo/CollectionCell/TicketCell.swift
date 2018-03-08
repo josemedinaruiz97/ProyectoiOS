@@ -10,6 +10,8 @@ import UIKit
 
 class TicketCell: UICollectionViewCell {
     
+    
+    
     @IBOutlet weak var labelTicketCell: UILabel!
     @IBOutlet weak var labelDateCell: UILabel!
     @IBOutlet weak var labelId: UILabel!
