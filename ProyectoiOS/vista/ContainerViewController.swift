@@ -9,14 +9,14 @@
 import UIKit
 
 open class ContainerViewController: UIViewController {
-    var arrayProductos: [Producto]!
-    var arrayFamilias: [Familia]!
+    var arrayProductos:[Producto]!
+    var arrayFamilias:[Familia]!
     var arrayTicket : [Ticket]!
     var arrayDetailTicket : [TicketDetail]!
-    var token: String!
+    var token:String!
     var usuarioYContraseña: String!
     var cardProduct = [CardBakery]()
-    var anterior = ""
+    var anterior=""
     //Manipulating container views
     fileprivate weak var viewController : UIViewController!
     /** Pass in a tuple of required TimeInterval with UIViewAnimationOptions */

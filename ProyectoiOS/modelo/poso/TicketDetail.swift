@@ -10,11 +10,11 @@ import Foundation
 
 class TicketDetail:Codable{
     
-    var id: String
-    var idticket: String
-    var idproduct: String
-    var quantity: String
-    var price: String
+    var id : String
+    var idticket : String
+    var idproduct : String
+    var quantity : String
+    var price : String
     
     init(id: String, idticket: String, idproduct: String, quantity: String, price: String) {
         

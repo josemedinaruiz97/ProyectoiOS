@@ -10,10 +10,10 @@ import UIKit
 
 class TicketViewDetail: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var id: String?
-    var arrayDetailTicket: [TicketDetail]?
-    var aux: [TicketDetail] = []
-    var arrayProductos: [Producto]?
+    var id : String?
+    var arrayDetailTicket : [TicketDetail]?
+    var aux : [TicketDetail] = []
+    var arrayProductos : [Producto]?
 
     override func viewDidLoad() {
         super.viewDidLoad()

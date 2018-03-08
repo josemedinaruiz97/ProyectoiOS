@@ -12,10 +12,10 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var collectionTicket: UICollectionView!
     
-    var arrayTicket: [Ticket]?
-    var arrayDetailTicket: [TicketDetail]?
-    var arrayProductos: [Producto]?
-    var id: String?
+    var arrayTicket : [Ticket]?
+    var arrayDetailTicket : [TicketDetail]?
+    var arrayProductos : [Producto]?
+    var id : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,15 +44,8 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
         
         cell.callBack = self
         
-        let isoDate = self.arrayTicket![indexPath.row].date
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let date = dateFormatter.date(from: isoDate)!
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        let result = dateFormatter.string(from: date)
-        
         cell.labelTicketCell.text = seller
-        cell.labelDateCell.text = result
+        cell.labelDateCell.text = self.arrayTicket![indexPath.row].date
         cell.labelId.text = self.arrayTicket![indexPath.row].id
         
         return cell
@@ -67,35 +60,23 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        
-        switch (segue.identifier ?? "") {
-        case "detailTicketView":
-            guard let viewCellContent = segue.destination as? TicketViewDetail else {
+        if(segue.identifier == "detailTicketView"){
+        guard let viewCellContent = segue.destination as? TicketViewDetail else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             
             viewCellContent.arrayDetailTicket = self.arrayDetailTicket
             viewCellContent.id = self.id
             viewCellContent.arrayProductos = self.arrayProductos
-        case "sellerView":
-            guard let destino = segue.destination as? SellerViewController else {
-                fatalError("Unexpected destination: \(segue.destination)")
-            }
-            
-            destino.arrayTicket = self.arrayTicket
-            destino.arrayDetailTicket = self.arrayDetailTicket
-            destino.arrayProductos = self.arrayProductos
-        case "dateView":
-            guard let destino = segue.destination as? DateViewController else {
-                fatalError("Unexpected destination: \(segue.destination)")
-            }
-            
-            destino.arrayTicket = self.arrayTicket
-            destino.arrayDetailTicket = self.arrayDetailTicket
-            destino.arrayProductos = self.arrayProductos
-        default:
-            fatalError("Unexpected destination: \(segue.destination)")
         }
     }
     
+    @IBAction func volverTicketCollection(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? TicketViewDetail {
+            
+            
+        }
+    }
+ 
+
 }
