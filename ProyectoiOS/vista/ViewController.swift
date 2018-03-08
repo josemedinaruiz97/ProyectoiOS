@@ -50,6 +50,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             }
             
             totalLabel.text = "Total " + String(totalPrice) + "€"
+        }else{
+            btnCard.isEnabled=false
         }
 
     }
@@ -146,6 +148,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             if cardProduct.isEmpty{
                 totalLabel.text = "Total 0€"
             }else{
+                btnCard.isEnabled=true;
                 totalPrice=0
                 for priceProduct in cardProduct{
                     totalPrice = totalPrice + (priceProduct.price! * Double(priceProduct.amount!))

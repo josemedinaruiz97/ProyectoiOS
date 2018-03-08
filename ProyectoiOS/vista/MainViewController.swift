@@ -64,6 +64,8 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
             
             mainTotalLabel.text = "Total " + String(totalPrice) + "€"
+        }else{
+            mainCardButton.isEnabled=false
         }
         
         
@@ -156,6 +158,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         if cardProduct.isEmpty{
             mainTotalLabel.text = "Total 0€"
         }else{
+            mainCardButton.isEnabled=true;
             totalPrice=0
             for priceProduct in cardProduct{
                 totalPrice = totalPrice + (priceProduct.price! * Double(priceProduct.amount!))

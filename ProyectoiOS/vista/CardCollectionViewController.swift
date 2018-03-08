@@ -38,6 +38,7 @@ class CardCollectionViewController: UICollectionViewController, OnHttpResponse{
     }
     
     func onErrorReceivingData(message: String) {
+        performSegue(withIdentifier: "segueReturn", sender:self)
         
     }
     
