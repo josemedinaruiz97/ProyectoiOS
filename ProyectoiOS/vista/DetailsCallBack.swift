@@ -15,3 +15,8 @@ protocol callBack {
 protocol callBackTicket {
     func passIdTicket(indexPath : IndexPath)
 }
+
+protocol callBackCarro {
+    func mas(indexPath: IndexPath)
+    func menos(indexPath: IndexPath)
+}

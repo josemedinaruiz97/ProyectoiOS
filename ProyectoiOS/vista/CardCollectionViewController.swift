@@ -10,7 +10,9 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class CardCollectionViewController: UICollectionViewController, OnHttpResponse{
+class CardCollectionViewController: UICollectionViewController, OnHttpResponse, callBackCarro{
+    
+    @IBOutlet var collectionCarro: UICollectionView!
     func onDataReceived(data: Data) {
         guard let respuesta:Dictionary=RestJsonUtil.jsonToDict(data: data) else {
             return
@@ -58,7 +60,7 @@ class CardCollectionViewController: UICollectionViewController, OnHttpResponse{
     }
     
     @IBAction func btnCancelar(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "segueReturn", sender:self)
+        dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +69,7 @@ class CardCollectionViewController: UICollectionViewController, OnHttpResponse{
         // self.clearsSelectionOnViewWillAppear = false
         
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         // Do any additional setup after loading the view.
     }
@@ -91,15 +93,47 @@ class CardCollectionViewController: UICollectionViewController, OnHttpResponse{
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : CardCollectionViewCell =  collectionView.dequeueReusableCell(withReuseIdentifier: "cardViewCell", for: indexPath) as! CardCollectionViewCell
+        let cell : CardCollectionViewCell =  collectionCarro.dequeueReusableCell(withReuseIdentifier: "cardViewCell", for: indexPath) as! CardCollectionViewCell
         let product:CardBakery=cardArray![indexPath.row]
         cell.lProducto.text=product.name
         cell.lCantidad.text=String(describing: product.amount!)
+        cell.indexPath = indexPath
+        cell.callBack = self
         
         // Configure the cell
         
         return cell
     }
+    
+    func mas(indexPath: IndexPath) {
+        print("Sumar")
+        
+        var cantidad = cardArray![indexPath.row].amount!
+        print(cantidad)
+        cantidad = cantidad + 1
+        print(cantidad)
+        cardArray![indexPath.row].amount = cantidad
+        
+        collectionCarro.reloadData()
+        
+    }
+    
+    func menos(indexPath: IndexPath) {
+        print("Restar")
+        
+        var cantidad = cardArray![indexPath.row].amount!
+        print(cantidad)
+        if(cantidad>0){
+            cantidad = cantidad - 1
+            print(cantidad)
+            cardArray![indexPath.row].amount = cantidad
+        }
+        if(cantidad==0){
+            cardArray!.remove(at: indexPath.row)
+        }
+        collectionCarro.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let des = segue.destination as? UINavigationController
         let destino = des?.viewControllers.first as? SegmentedController

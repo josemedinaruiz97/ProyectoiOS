@@ -167,7 +167,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             mainTotalLabel.text = "Total " + String(totalPrice) + "€"
         }
         
-        self.mainControllerProduct.reloadData()
+        //self.mainControllerProduct.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

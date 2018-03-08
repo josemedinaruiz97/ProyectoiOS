@@ -11,7 +11,14 @@ import UIKit
 class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lProducto: UILabel!
     @IBOutlet weak var lCantidad: UILabel!
-    @IBOutlet weak var btnSumar: UIButton!
-    @IBOutlet weak var btnRestar: UIButton!
     
+    var indexPath: IndexPath?
+    var callBack: callBackCarro?
+    
+    @IBAction func buttonSumar(_ sender: Any) {
+        self.callBack?.mas(indexPath: self.indexPath!)
+    }
+    @IBAction func buttonRestar(_ sender: Any) {
+        self.callBack?.menos(indexPath: self.indexPath!)
+    }
 }

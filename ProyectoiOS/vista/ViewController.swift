@@ -43,6 +43,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         self.view.addSubview(ProductCollectionView)
         self.view.addSubview(CategoryCollectionView)
+        let layout = self.ProductCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumInteritemSpacing = 2
+        layout.itemSize = CGSize(width: (self.ProductCollectionView.frame.size.width - 50)/2,height: ((self.ProductCollectionView.frame.size.height + 75)/3) )
         
         if !cardProduct.isEmpty{
             for priceProduct in cardProduct{
@@ -157,7 +160,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 totalLabel.text = "Total " + String(totalPrice) + "€"
             }
             
-            self.ProductCollectionView.reloadData()
+            //self.ProductCollectionView.reloadData()
             
         } else {
             let categoryCell: CategoryCollectionViewCell = collectionView.cellForItem(at: indexPath) as! CategoryCollectionViewCell
