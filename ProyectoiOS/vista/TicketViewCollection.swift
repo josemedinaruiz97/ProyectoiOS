@@ -74,7 +74,16 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
     @IBAction func volverTicketCollection(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? TicketViewDetail {
             
+<<<<<<< HEAD
             
+=======
+            destino.arrayTicket = self.arrayTicket
+            destino.arrayDetailTicket = self.arrayDetailTicket
+            destino.arrayProductos = self.arrayProductos
+        case "dateView": break
+        default:
+            fatalError("Unexpected destination: \(segue.destination)")
+>>>>>>> parent of df373f4... PC
         }
     }
  

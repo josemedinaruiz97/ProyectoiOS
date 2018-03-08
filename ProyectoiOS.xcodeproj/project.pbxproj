@@ -11,6 +11,14 @@
 		3851E2D1204F73E40068D2C4 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3851E2D0204F73E40068D2C4 /* DetailCell.swift */; };
 		385DCE7E204F5F4900D82078 /* TicketViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DCE7D204F5F4900D82078 /* TicketViewDetail.swift */; };
 		385DCE80204F68AB00D82078 /* TicketDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DCE7F204F68AB00D82078 /* TicketDetail.swift */; };
+<<<<<<< HEAD
+=======
+		38636CF62050360E00AADD5E /* SellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38636CF52050360E00AADD5E /* SellerViewController.swift */; };
+		38636CF82050385000AADD5E /* SellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38636CF72050385000AADD5E /* SellerCell.swift */; };
+		38636CFA2050406300AADD5E /* SellerViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38636CF92050406300AADD5E /* SellerViewDetail.swift */; };
+		38636CFC2050479100AADD5E /* TicketCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38636CFB2050479100AADD5E /* TicketCell2.swift */; };
+		3898BFD4205063E500B23E6B /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3898BFD3205063E500B23E6B /* DateViewController.swift */; };
+>>>>>>> parent of df373f4... PC
 		38E0BE90204F22D1002E1851 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0BE8F204F22D1002E1851 /* TicketCell.swift */; };
 		38E0BE92204F24F0002E1851 /* TicketViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0BE91204F24F0002E1851 /* TicketViewCollection.swift */; };
 		5C0EA9DD205029590002B784 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0EA9DC205029590002B784 /* CardCell.swift */; };
@@ -62,6 +70,14 @@
 		3851E2D0204F73E40068D2C4 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		385DCE7D204F5F4900D82078 /* TicketViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewDetail.swift; sourceTree = "<group>"; };
 		385DCE7F204F68AB00D82078 /* TicketDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetail.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		38636CF52050360E00AADD5E /* SellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerViewController.swift; sourceTree = "<group>"; };
+		38636CF72050385000AADD5E /* SellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerCell.swift; sourceTree = "<group>"; };
+		38636CF92050406300AADD5E /* SellerViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerViewDetail.swift; sourceTree = "<group>"; };
+		38636CFB2050479100AADD5E /* TicketCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell2.swift; sourceTree = "<group>"; };
+		3898BFD3205063E500B23E6B /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+>>>>>>> parent of df373f4... PC
 		38E0BE8F204F22D1002E1851 /* TicketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
 		38E0BE91204F24F0002E1851 /* TicketViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewCollection.swift; sourceTree = "<group>"; };
 		5C0EA9DC205029590002B784 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
@@ -200,6 +216,7 @@
 =======
 				38636CF72050385000AADD5E /* SellerCell.swift */,
 				38636CFB2050479100AADD5E /* TicketCell2.swift */,
+<<<<<<< HEAD
 				3890DCD420508E2B0034C97D /* TicketCell3.swift */,
 >>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
 =======
@@ -209,6 +226,8 @@
 >>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
 =======
 >>>>>>> parent of 0497823... Merge pull request #3 from josemedinaruiz97/JJ_02
+=======
+>>>>>>> parent of df373f4... PC
 			);
 			path = CollectionCell;
 			sourceTree = "<group>";
@@ -256,6 +275,7 @@
 >>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
 				38636CF52050360E00AADD5E /* SellerViewController.swift */,
 				38636CF92050406300AADD5E /* SellerViewDetail.swift */,
+<<<<<<< HEAD
 				3890DCD0205079B80034C97D /* DateViewController.swift */,
 				3890DCD2205083180034C97D /* DateViewCollection.swift */,
 <<<<<<< HEAD
@@ -264,6 +284,9 @@
 >>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
 =======
 >>>>>>> parent of 0497823... Merge pull request #3 from josemedinaruiz97/JJ_02
+=======
+				3898BFD3205063E500B23E6B /* DateViewController.swift */,
+>>>>>>> parent of df373f4... PC
 			);
 			path = vista;
 			sourceTree = "<group>";
@@ -406,6 +429,10 @@
 				5CE39184204EB20C00C27DC1 /* ViewController.swift in Sources */,
 				5CE3918C204EB20C00C27DC1 /* EmptySegue.swift in Sources */,
 				385DCE80204F68AB00D82078 /* TicketDetail.swift in Sources */,
+<<<<<<< HEAD
+=======
+				3898BFD4205063E500B23E6B /* DateViewController.swift in Sources */,
+>>>>>>> parent of df373f4... PC
 				38E0BE92204F24F0002E1851 /* TicketViewCollection.swift in Sources */,
 				5CE39187204EB20C00C27DC1 /* MainViewController.swift in Sources */,
 				5CE39172204EB20500C27DC1 /* ClienteHttp.swift in Sources */,
