@@ -75,8 +75,11 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
         if let sourceViewController = sender.source as? TicketViewDetail {
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
+=======
+>>>>>>> parent of df373f4... PC
             destino.arrayTicket = self.arrayTicket
             destino.arrayDetailTicket = self.arrayDetailTicket
             destino.arrayProductos = self.arrayProductos
