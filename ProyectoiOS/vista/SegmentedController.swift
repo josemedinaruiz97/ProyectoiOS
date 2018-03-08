@@ -11,6 +11,7 @@ import UIKit
 class SegmentedController: UIViewController {
     var container:ContainerViewController!
 <<<<<<< HEAD
+<<<<<<< HEAD
     var arrayProductos:[Producto]?
     var cardArray:[CardBakery]=Array()
     var arrayTicket : [Ticket]?
@@ -19,12 +20,17 @@ class SegmentedController: UIViewController {
     var token:String!
     var usuarioYContraseña:String!
 =======
+=======
+>>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
     var arrayProductos: [Producto]?
     var arrayTicket: [Ticket]?
     var arrayDetailTicket: [TicketDetail]?
     var arrayFamilias: [Familia]?
     var token: String!
     var usuarioYContraseña: String!
+<<<<<<< HEAD
+>>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
+=======
 >>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
     @IBAction func accion(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {

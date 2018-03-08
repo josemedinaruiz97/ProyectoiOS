@@ -478,6 +478,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNl-Dc-0yO" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2600.8000000000002" y="438.53073463268368"/>
+<<<<<<< HEAD
         </scene>
         <!--Card View Controller-->
         <scene sceneID="vKN-3r-x9V">
@@ -578,6 +579,8 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ao-sV-c7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3310" y="1149"/>
+=======
+>>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
         </scene>
         <!--Ticket View Collection-->
         <scene sceneID="P7M-DS-iDL">
@@ -1383,23 +1386,30 @@
         </scene>
         <!--Navigation Controller-->
 <<<<<<< HEAD
+<<<<<<< HEAD
         <scene sceneID="713-6a-ig3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9qr-Ni-acR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="etg-cn-JoN">
 =======
+=======
+>>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
         <scene sceneID="8KU-9G-70W">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yEJ-Nj-VNv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fjE-bp-NAx">
+<<<<<<< HEAD
+>>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
+=======
 >>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <segue destination="87u-cg-gl8" kind="relationship" relationship="rootViewController" id="lBx-YY-2OD"/>
                     </connections>
@@ -1408,12 +1418,17 @@
             </objects>
             <point key="canvasLocation" x="3558" y="439"/>
 =======
+=======
+>>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
                         <segue destination="XVc-dn-mP4" kind="relationship" relationship="rootViewController" id="21H-aD-Cj7"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6b-mx-cwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1001" y="888"/>
+<<<<<<< HEAD
+>>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
+=======
 >>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
         </scene>
     </scenes>

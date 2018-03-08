@@ -208,7 +208,13 @@
 				38E0BE8F204F22D1002E1851 /* TicketCell.swift */,
 				3851E2D0204F73E40068D2C4 /* DetailCell.swift */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				5C0EA9DC205029590002B784 /* CardCell.swift */,
+=======
+				38636CF72050385000AADD5E /* SellerCell.swift */,
+				38636CFB2050479100AADD5E /* TicketCell2.swift */,
+				3890DCD420508E2B0034C97D /* TicketCell3.swift */,
+>>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
 =======
 				38636CF72050385000AADD5E /* SellerCell.swift */,
 				38636CFB2050479100AADD5E /* TicketCell2.swift */,
@@ -253,12 +259,18 @@
 				38E0BE91204F24F0002E1851 /* TicketViewCollection.swift */,
 				385DCE7D204F5F4900D82078 /* TicketViewDetail.swift */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				5C0EA9DE205029940002B784 /* CardViewController.swift */,
 =======
+=======
+>>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
 				38636CF52050360E00AADD5E /* SellerViewController.swift */,
 				38636CF92050406300AADD5E /* SellerViewDetail.swift */,
 				3890DCD0205079B80034C97D /* DateViewController.swift */,
 				3890DCD2205083180034C97D /* DateViewCollection.swift */,
+<<<<<<< HEAD
+>>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
+=======
 >>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
 			);
 			path = vista;
@@ -410,7 +422,11 @@
 				5CE3916C204EB20500C27DC1 /* CategoryCollectionViewCell.swift in Sources */,
 				38216B95204F2F420078817C /* Ticket.swift in Sources */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				5C0EA9DF205029940002B784 /* CardViewController.swift in Sources */,
+=======
+				38636CFA2050406300AADD5E /* SellerViewDetail.swift in Sources */,
+>>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
 =======
 				38636CFA2050406300AADD5E /* SellerViewDetail.swift in Sources */,
 >>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
