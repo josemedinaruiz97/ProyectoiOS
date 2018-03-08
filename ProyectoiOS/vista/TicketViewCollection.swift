@@ -76,6 +76,7 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
             
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
 =======
@@ -87,6 +88,9 @@ class TicketViewCollection: UIViewController, UICollectionViewDataSource, UIColl
         default:
             fatalError("Unexpected destination: \(segue.destination)")
 >>>>>>> parent of df373f4... PC
+=======
+            
+>>>>>>> parent of 8b17b86... post hecho
         }
     }
  

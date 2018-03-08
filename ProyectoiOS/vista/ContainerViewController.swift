@@ -74,15 +74,9 @@ open class ContainerViewController: UIViewController {
                     viewController = nil
                 }
                 anterior="primera"
-                print(token)
                 let destino = segue.destination as? MainViewController
                 destino?.productArray=self.arrayProductos
                 destino?.cardProduct=self.cardProduct
-                destino?.arrayFamilias=self.arrayFamilias
-                destino?.arrayTicket=self.arrayTicket
-                destino?.arrayDetailTicket=self.arrayDetailTicket
-                destino?.token=self.token
-                destino?.usuarioYContraseña=self.usuarioYContraseña
                 print("pepe")
             }else if(segue.identifier=="segunda"){
                 if viewController != nil{

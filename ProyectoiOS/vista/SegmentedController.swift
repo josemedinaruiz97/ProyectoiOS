@@ -13,16 +13,21 @@ class SegmentedController: UIViewController {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     var arrayProductos:[Producto]?
     var cardArray:[CardBakery]=Array()
 =======
     var arrayProductos:[Producto]?
 >>>>>>> parent of 0497823... Merge pull request #3 from josemedinaruiz97/JJ_02
+=======
+    var arrayProductos:[Producto]?
+>>>>>>> parent of 8b17b86... post hecho
     var arrayTicket : [Ticket]?
     var arrayDetailTicket : [TicketDetail]?
     var arrayFamilias:[Familia]?
     var token:String!
     var usuarioYContraseña:String!
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -39,6 +44,8 @@ class SegmentedController: UIViewController {
 >>>>>>> 049782340edcb0f71509389e9e40905c3299c43b
 =======
 >>>>>>> parent of 0497823... Merge pull request #3 from josemedinaruiz97/JJ_02
+=======
+>>>>>>> parent of 8b17b86... post hecho
     @IBAction func accion(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -75,8 +82,6 @@ class SegmentedController: UIViewController {
             container.arrayFamilias=self.arrayFamilias
             container.arrayTicket = self.arrayTicket
             container.arrayDetailTicket = self.arrayDetailTicket
-            container.cardProduct=self.cardArray
-            container.token=self.token
             container.viewDidLoad()
         }
     }

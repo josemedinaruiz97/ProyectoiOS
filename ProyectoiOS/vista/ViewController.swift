@@ -22,10 +22,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var productArray : [Producto]?
     var catSelectArray : [Producto]?=[]
     var cardProduct = [CardBakery]()
-    var arrayTicket : [Ticket]!
-    var arrayDetailTicket : [TicketDetail]!
-    var token:String!
-    var usuarioYContraseña: String!
     
     var totalPrice: Double = 0.0
     var send : Producto?
@@ -183,33 +179,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        switch segue.identifier {
-        case "ticketsegue"?:
-            let des = segue.destination as? UINavigationController
-            let destino = des?.viewControllers.first as? CardViewController
-            /*guard let cardViewController = segue.destination as? CardViewController else {
-             fatalError("Unexpected destination: \(segue.destination)")
-             }*/
-            
-            destino?.arrayProductos=self.productArray
-            destino?.cardArray=self.cardProduct
-            destino?.arrayFamilias=self.categoryArray
-            destino?.arrayTicket=self.arrayTicket
-            destino?.arrayDetailTicket=self.arrayDetailTicket
-            destino?.token=self.token
-            destino?.usuarioYContraseña=self.usuarioYContraseña
-            break
-        case "viewDescription"?:
-            guard let detailsViewController = segue.destination as? DetailsViewController else {
-                fatalError("Unexpected destination: \(segue.destination)")
-            }
-            
-            detailsViewController.productObject = send
-            break
-        default:
-            print("")
-            break
+        
+        guard let detailsViewController = segue.destination as? DetailsViewController else {
+            fatalError("Unexpected destination: \(segue.destination)")
         }
+        
+        detailsViewController.productObject = send
     }
     
 }

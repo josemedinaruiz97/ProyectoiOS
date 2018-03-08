@@ -20,6 +20,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7Z-7p-g5d">
+                                <rect key="frame" x="166" y="456" width="42" height="30"/>
+                                <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="evento:" destination="ehN-sM-xsg" eventType="touchUpInside" id="ESf-wQ-9tH"/>
+                                    <segue destination="aaJ-JV-rCX" kind="presentation" identifier="hello" id="B5J-Fv-FLl"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFL-eU-JeX">
                                 <rect key="frame" x="16" y="323" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -59,14 +67,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7Z-7p-g5d">
-                                <rect key="frame" x="292" y="111" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log In"/>
-                                <connections>
-                                    <action selector="evento:" destination="ehN-sM-xsg" eventType="touchUpInside" id="ESf-wQ-9tH"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -86,7 +86,9 @@
                             <constraint firstItem="9Re-PP-IGk" firstAttribute="top" secondItem="zm9-9q-or0" secondAttribute="bottom" constant="34" id="lO3-SH-xS6"/>
                             <constraint firstItem="zm9-9q-or0" firstAttribute="centerX" secondItem="9ts-xM-faA" secondAttribute="centerX" id="mbi-Ot-H7q"/>
                             <constraint firstItem="9Re-PP-IGk" firstAttribute="trailing" secondItem="znw-fU-2XY" secondAttribute="trailing" id="nxG-rI-ouc"/>
+                            <constraint firstItem="9ts-xM-faA" firstAttribute="centerX" secondItem="y7Z-7p-g5d" secondAttribute="centerX" id="qBQ-vI-cpa"/>
                             <constraint firstItem="znw-fU-2XY" firstAttribute="top" secondItem="9Re-PP-IGk" secondAttribute="bottom" constant="43" id="sRb-LO-cB9"/>
+                            <constraint firstItem="y7Z-7p-g5d" firstAttribute="top" secondItem="9ts-xM-faA" secondAttribute="bottom" constant="42" id="ufT-72-Lew"/>
                             <constraint firstItem="3cg-qd-yRD" firstAttribute="top" secondItem="6qX-Ec-RlF" secondAttribute="top" constant="230" id="yFg-e6-I3u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6qX-Ec-RlF"/>
@@ -95,12 +97,11 @@
                         <outlet property="lError" destination="9ts-xM-faA" id="kXq-zx-vxl"/>
                         <outlet property="tilLogin" destination="9Re-PP-IGk" id="vvX-aY-4y9"/>
                         <outlet property="tilPassword" destination="znw-fU-2XY" id="uvD-PX-djb"/>
-                        <segue destination="aaJ-JV-rCX" kind="presentation" identifier="hello" id="71A-xO-o8a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUG-8R-JMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1082.4000000000001" y="17.541229385307346"/>
+            <point key="canvasLocation" x="-1081" y="18"/>
         </scene>
         <!--Backery-->
         <scene sceneID="tne-QT-ifu">
@@ -214,7 +215,7 @@
                                                             <state key="normal" image="icons8-plus-50"/>
                                                             <connections>
                                                                 <action selector="btnDetailsMain:" destination="WTy-qr-Pnx" eventType="touchUpInside" id="PrV-et-n4r"/>
-                                                                <segue destination="iFi-77-cnb" kind="show" identifier="mainDetail" id="7sa-Lu-ExS"/>
+                                                                <segue destination="iFi-77-cnb" kind="show" id="7sa-Lu-ExS"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -264,9 +265,6 @@
                                             <constraint firstAttribute="width" constant="60" id="0g4-Nz-1Wj"/>
                                         </constraints>
                                         <state key="normal" image="icons8-shopping-cart-filled-50"/>
-                                        <connections>
-                                            <segue destination="9qr-Ni-acR" kind="presentation" identifier="mainCard" id="10l-4w-xyW"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -322,9 +320,6 @@
                                         <state key="normal" image="icons8-shopping-cart-filled-50">
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="9qr-Ni-acR" kind="presentation" identifier="ticketsegue" id="1Mr-Vh-e2C"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92547765544041449" green="0.92547765544041449" blue="0.92547765544041449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -414,7 +409,7 @@
                                                             </state>
                                                             <connections>
                                                                 <action selector="btnDetails:" destination="zb4-cD-otv" eventType="touchUpInside" id="qx6-8D-mRa"/>
-                                                                <segue destination="iFi-77-cnb" kind="show" identifier="viewDescription" id="emF-P2-y7K"/>
+                                                                <segue destination="iFi-77-cnb" kind="show" id="emF-P2-y7K"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -477,6 +472,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNl-Dc-0yO" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <point key="canvasLocation" x="2600.8000000000002" y="438.53073463268368"/>
 <<<<<<< HEAD
@@ -585,6 +581,9 @@
 =======
             <point key="canvasLocation" x="2262" y="439"/>
 >>>>>>> parent of 0497823... Merge pull request #3 from josemedinaruiz97/JJ_02
+=======
+            <point key="canvasLocation" x="2262" y="439"/>
+>>>>>>> parent of 8b17b86... post hecho
         </scene>
         <!--Ticket View Collection-->
         <scene sceneID="P7M-DS-iDL">
@@ -701,6 +700,7 @@
                                 </connections>
                             </collectionView>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6m-zl-lqV">
                                 <rect key="frame" x="40" y="45" width="85" height="30"/>
@@ -717,6 +717,8 @@
                                 </connections>
                             </button>
 >>>>>>> parent of df373f4... PC
+=======
+>>>>>>> parent of 8b17b86... post hecho
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -733,6 +735,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ta-Jx-aAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <point key="canvasLocation" x="1501.5999999999999" y="888.30584707646187"/>
 =======
@@ -1015,6 +1018,9 @@
 >>>>>>> parent of df373f4... PC
 =======
 >>>>>>> parent of df373f4... PC
+=======
+            <point key="canvasLocation" x="1501.5999999999999" y="888.30584707646187"/>
+>>>>>>> parent of 8b17b86... post hecho
         </scene>
         <!--Ticket View Detail-->
         <scene sceneID="Thf-ue-sC3">
@@ -1206,7 +1212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9E-mI-ppq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3310" y="-286"/>
+            <point key="canvasLocation" x="3076" y="53.523238380809602"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bw7-6Q-nwv">
@@ -1226,6 +1232,7 @@
             </objects>
             <point key="canvasLocation" x="-370" y="36"/>
         </scene>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <!--Navigation Controller-->
 <<<<<<< HEAD
@@ -1276,6 +1283,8 @@
         </scene>
 =======
 >>>>>>> parent of 0497823... Merge pull request #3 from josemedinaruiz97/JJ_02
+=======
+>>>>>>> parent of 8b17b86... post hecho
     </scenes>
     <resources>
         <image name="icons8-plus-50" width="25" height="25"/>
@@ -1283,9 +1292,8 @@
         <image name="logo (1)" width="97" height="91"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1Mr-Vh-e2C"/>
-        <segue reference="w6c-lE-fJe"/>
         <segue reference="emF-P2-y7K"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1294,5 +1302,7 @@
         <segue reference="AMP-kS-OSp"/>
         <segue reference="wWB-kD-Y6S"/>
 >>>>>>> parent of df373f4... PC
+=======
+>>>>>>> parent of 8b17b86... post hecho
     </inferredMetricsTieBreakers>
 </document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Login: UIViewController, OnHttpResponse{
+class Login: UIViewController, OnHttpResponse, UITextFieldDelegate{
     //MARK: Propiedades
     @IBOutlet weak var tilLogin: UITextField!
     @IBOutlet weak var tilPassword: UITextField!
